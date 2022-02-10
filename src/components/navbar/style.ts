@@ -7,8 +7,22 @@ export const Nav = styled.nav`
   color: white;
   padding: 0px 20px;
   border: 1px solid green;
+  background-color:#fff;
 `;
-
+export const NavList = styled.div` 
+ display: flex;
+ justify-content: center;
+`
+export const Logo = styled.div`
+ display: flex ;
+ justify-content: center ;
+ align-items: center ;
+`
+export const BtnWrapper = styled.div`
+  display: flex ;
+ justify-content: center ;
+ align-items: center ;
+`
 export const NavLink = styled(Link)`
   padding: 29px 20px;
   font-size: 20px;
