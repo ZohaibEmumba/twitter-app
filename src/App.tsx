@@ -1,11 +1,11 @@
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Post from "./components/post-section/Post";
+import SideNavbar from "./components/sidebar/SideNavbar";
 
 const App = () => {
   return (
     <div className="App">
-      <Post />
+      <SideNavbar />
     </div>
   );
 };
