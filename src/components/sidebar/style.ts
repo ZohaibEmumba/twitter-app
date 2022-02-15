@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SideBar = styled.div`
-  width: 30%;
+  width: 25%;
   position: fixed;
   left: 0;
   height: 100%;

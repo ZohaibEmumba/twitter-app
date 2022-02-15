@@ -17,7 +17,6 @@ export const FormWrapper = styled.div`
     padding: 20px 5px;
     display: flex;
     flex-direction:column;
-    row-gap: 10px;    
 `
 export const Section = styled.section`
     display: flex;
@@ -25,7 +24,6 @@ export const Section = styled.section`
     color: black;
     padding: 10px 40px;
 `
-
 export const LinkWrapper = styled.div`
     ul{
         list-style-type: none;
