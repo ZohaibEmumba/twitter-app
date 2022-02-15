@@ -1,19 +1,15 @@
 import styled from "styled-components";
 
-export const MainSection=styled.section`
+export const MainSection = styled.section`
+  position:fixed;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-
+  border-right: 1px solid #e6ecf0;
 `
 export const SideBar = styled.div`
-  /* width: 25%;
-  position: fixed;
-  left: 0;
-  height: 100%; */
-  border-right: 1px solid #e6ecf0;
-  
+ 
   ul {
     list-style-type: none;
     display: flex;
@@ -21,21 +17,21 @@ export const SideBar = styled.div`
     align-items: end;
   }
   ul li {
-    width : 50%;
+    width : 100%;
   }
   ul li a{  
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #000;
-    padding: 18px 35px;
+    padding: 18px 10px;
     font-size: 20px;
     transistion : 1s ease-in-out;
-
+    
     &:hover {
       background: #f7f9f9;
       border-radius: 30px;
-      width: 40%;
+      width: 60%;
     }
   } 
   .active{
@@ -69,11 +65,50 @@ export const SidebarBtn = styled.div`
     }
   }
 `
-export const ProfileButton= styled.div`
-  padding: 10px 10px;
-  display: flex;
-  border: 1px solid white;
-  border-radius: 50px;
-  flex-direction: row;
+export const MainWrapper = styled.div` 
+    width:  236px ;
+    margin-bottom:  12px ;
+    margin-top: 12px ;
+    margin-right: 10px ;
+    align-self: flex-end;
+    transition: .1s ease-in-out;
+
+    &:hover {
+      background-color:rgba(15 , 20 , 25 , 0.1);
+      cursor: pointer ;
+      border-radius: 50px;
+    }
+`
+export const Img = styled.img`
+    border-radius: 50%;
+    object-fit: cover;
+`
+export const NameWrapper = styled.div` 
+    align-self: center ;
+    margin-left: 10px ;
+    margin-right: 10px ;
+`
+export const MarginWrapper= styled.div`
+    margin-left: 12px ;
+    marginRight: 12px ;
+`
+export const TextSpan= styled.span` 
+    font-size: 13px;    
+`
+export const TextSpan1= styled.span` 
+    font-size: 12px;
+    color: gray;    
+`
+export const IconWrapper = styled.div`
+    align-self: center;
+    cursor: pointer;
+    color: grey;
+`
+export const ProfileButton = styled.div`
+    padding: 10px 10px;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 50px;
+    flex-direction: row;
 `
 

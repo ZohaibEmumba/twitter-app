@@ -1,14 +1,15 @@
-import React from 'react'
-import CreateTweet from '../createtweet/CreateTweet'
-import { HomePage , PostHome} from './style'
+import { FaTwitter } from "react-icons/fa";
+import { PostHome } from "./style";
 
 const FixedHome = () => {
   return (
-    <HomePage>
-        <PostHome>Home</PostHome>
-        <CreateTweet />
-    </HomePage>
-  )
-}
+    <PostHome>
+      <div> Home</div>
+      <div>
+        <FaTwitter />
+      </div>
+    </PostHome>
+  );
+};
 
-export default FixedHome
+export default FixedHome;

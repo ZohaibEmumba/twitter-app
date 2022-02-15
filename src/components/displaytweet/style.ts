@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const WholeWrapper = styled.div`
+  display: flex ;
+  flex-direction: column ;  
+  border-right: 1px solid #e6ecf0;
+` 
 export const PostSection = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e6ecf0;
@@ -8,6 +13,7 @@ export const PostSection = styled.div`
 export const FirstPost = styled.div`
   display: flex;
   align-items: center;
+  gap:20px
 `;
 export const PostImg = styled.div`
   width: 50px;
@@ -22,7 +28,6 @@ export const PostImg = styled.div`
 `;
 export const PostName = styled.div`
   margin-left: 6px;
-
   .verify {
     margin-left: 3px;
     color: #1da1f2;
@@ -40,7 +45,7 @@ export const PostUserName = styled.div`
   }
 `;
 export const PostDetails = styled.div`
-  margin: 8px 30px;
+  margin: 8px 73px;
   overflow: hidden;
 `;
 
@@ -60,4 +65,7 @@ export const PostReactions = styled.div`
   justify-content: space-between;
   align-items: center;
   color: silver;
+  .re{
+    cursor: pointer;
+  }
 `;

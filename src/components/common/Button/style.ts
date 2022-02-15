@@ -4,8 +4,7 @@ import styled from "styled-components";
 // rgb(26, 140, 216)
 export const Button = styled.button`
     border-radius: 30px;
-    font-size: 14px;
-    
+    font-size: 15px;
     letter-spacing: 1px;
     text-decoration: none;
     cursor: pointer;
@@ -16,11 +15,5 @@ export const Button = styled.button`
     font-weight: ${props => props.theme.fontwght};
     border: ${props => props.theme.border};
     padding: ${props => props.theme.padding};
-    
-
 
 `;
-
-// &:hover{
-//     color : ${props => props}
-// }

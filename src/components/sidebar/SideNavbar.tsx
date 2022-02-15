@@ -11,7 +11,7 @@ import {
   FaEllipsisH,
 } from "react-icons/fa";
 import TwitterButton from "../common/Button/TwitterButton";
-import { MainSection, ProfileButton, SideBar, SidebarBtn } from "./style";
+import { IconWrapper, Img, MainSection, MainWrapper, MarginWrapper, NameWrapper, ProfileButton, SideBar, SidebarBtn, TextSpan, TextSpan1 } from "./style";
 import profileImg from "../../assets/zohaib.jpg";
 
 const TweetBtn = {
@@ -19,7 +19,7 @@ const TweetBtn = {
   textcolor: "white",
   fontwght: "700",
   border: "none",
-  padding: "0px 80px",
+  padding: "0px 90px",
 };
 
 const SideNavbar = () => {
@@ -33,43 +33,43 @@ const SideNavbar = () => {
             </a>
           </li>
           <li>
-            <a href="" className="active">
+            <a href="" className="hover-menu active">
               <FaHome className="icons" />
               Home
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaHashtag className="icons" /> Explore
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaRegBell className="icons" /> Notifications
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaRegEnvelope className="icons" /> Messages
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaRegBookmark className="icons" /> Bookmarks
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaClipboardList className="icons" /> Lists
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaUserAlt className="icons" /> Profile
             </a>
           </li>
           <li>
-            <a href="">
+            <a href=""  className="hover-menu">
               <FaMehBlank className="icons" /> More
             </a>
           </li>
@@ -78,58 +78,43 @@ const SideNavbar = () => {
           </SidebarBtn>
         </ul>
       </SideBar>
-      <div
-        style={{
-          width: "236px",
-          marginBottom: "12px",
-          marginTop: "12px",
-          marginRight: "10px",
-          alignSelf: "flex-end",
-        }}
-      >
+      <MainWrapper>
         <ProfileButton>
           <div>
-            <img
+            <Img
               src={profileImg}
               alt=""
               width="40px"
               height="40px"
-              style={{ borderRadius: "50%", objectFit: "cover" }}
             />
           </div>
 
-          <div
-            style={{
-              alignSelf: "center",
-              marginLeft: "10px",
-              marginRight: "10px",
-            }}
-          >
-            <div style={{ maxWidth: "100%" }}>
-              <div style={{ marginLeft: "12px", marginRight: "12px" }}>
+          <NameWrapper>
+            <div>
+              <MarginWrapper>
                 <span>
-                  <span style={{ fontSize: "13px" }}>
+                  <TextSpan>
                     <strong>Muhammad Zohaib </strong>
-                  </span>
+                  </TextSpan>
                 </span>
-              </div>
+            </MarginWrapper>
             </div>
-            <div style={{ maxWidth: "100%" }}>
-              <div style={{ marginLeft: "12px", marginRight: "12px" }}>
+            <div>
+              <MarginWrapper>
                 <span>
-                  <span style={{ fontSize: "12px", color: "lightgrey" }}>
+                  <TextSpan1>
                     @MuhammadZohaib
-                  </span>
+                  </TextSpan1>
                 </span>
-              </div>
+              </MarginWrapper>
             </div>
-          </div>
+          </NameWrapper>
 
-          <div style={{ alignSelf: "center" }}>
+          <IconWrapper>
             <FaEllipsisH />
-          </div>
+          </IconWrapper>
         </ProfileButton>
-      </div>
+      </MainWrapper>
     </MainSection>
   );
 };

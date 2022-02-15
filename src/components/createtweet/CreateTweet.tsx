@@ -1,36 +1,49 @@
 import React from 'react'
 import { FaRegImage, FaRegListAlt, FaRegSmile, FaCalendarCheck } from 'react-icons/fa'
-import { CreateSection, Createfirst, Createimg, Createinput, Createsecond, Createicons, Createbtn , HR } from './style'
+import { CreateSection, Createfirst, Createimg, Createinput, Createsecond, Createicons, Createbtn, HR, Wrapper } from './style'
 import img from '../../assets/zohaib.jpg'
+import TwitterButton from '../common/Button/TwitterButton'
+
+const tweetBtn = {
+  bgcolor: "rgb(29, 155, 240)",
+  textcolor: "white",
+  fontwght: "700",
+  border: "none",
+  padding: "0px 30px",
+}
 
 const CreateTweet = () => {
   return (
-    <CreateSection>
-    <Createfirst>
-      <Createimg>
-        <img src={img} alt="profile " />
-      </Createimg>
-      <Createinput>
-        <input
-          type="text"
-          className="create__control"
-          placeholder="What's happing?"
-        />
-      </Createinput>
-    </Createfirst>
-    <HR></HR>
-    <Createsecond>
-      <Createicons>
-        <FaRegImage className="ic" />
-        <FaRegListAlt className="ic" />
-        <FaRegSmile className="ic" />
-        <FaCalendarCheck className="ic" />
-      </Createicons>
-      <Createbtn>
-        <a href="">Tweet</a>
-      </Createbtn>
-    </Createsecond>
-  </CreateSection>
+    <Wrapper>
+      <CreateSection>
+        <Createfirst>
+          <Createimg>
+            <img src={img} alt="profile " />
+          </Createimg>
+          <Createinput>
+            <div>
+              <input
+                type="text"
+                className="create__control"
+                placeholder="What's happing?"
+              />
+            </div>
+            <HR></HR>
+            <Createsecond>
+              <Createicons>
+                <span><FaRegImage className="ic" /></span>
+                <span><FaRegListAlt className="ic" /></span>
+                <span><FaRegSmile className="ic" /></span>
+                <span><FaCalendarCheck className="ic" /></span>
+              </Createicons>
+              <Createbtn>
+                <TwitterButton title="Tweet" styleBtn={tweetBtn} />
+              </Createbtn>
+            </Createsecond>
+          </Createinput>
+        </Createfirst>
+      </CreateSection>
+    </Wrapper>
   )
 }
 
