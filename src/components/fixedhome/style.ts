@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-  width: 50%;
-  margin-left: 25%;
   border-right: 1px solid #e6ecf0;
 `;
 export const PostHome = styled.div` 
-  width: 48.4%;
+  width: 33.3%;
   position: fixed;
   top: 0;
   padding: 15px;

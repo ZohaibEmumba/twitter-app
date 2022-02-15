@@ -21,7 +21,7 @@ export const SideBar = styled.div`
     align-items: end;
   }
   ul li {
-    width : 60%;
+    width : 50%;
   }
   ul li a{  
     display: flex;

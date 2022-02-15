@@ -20,6 +20,7 @@ const SignUpBtn = {
   fontwght: '700',
   border: "none",
 }
+
 const SignInBtn = {
   bgcolor:"white",
   textcolor:"black",

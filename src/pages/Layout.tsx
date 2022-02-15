@@ -6,22 +6,17 @@ import { Section } from "./style";
 
 const Layout = () => {
   return (
-    
-    // 
-    //   <div>
-    //     <FixedHome />
-    //     <DsiplayTweet />
-    //   </div>
-
     <Section>
-        <div>
-            <SideNavbar />
+      <div>
+        <SideNavbar />
+      </div>
+      <div>
+        <div style={{width:'50%'}}>
+        <FixedHome />
+        <DsiplayTweet />
         </div>
-        <div style={{ backgroundColor:"yellowgreen"}}>
-                
-        </div>
+      </div>
     </Section>
-    
   );
 };
 

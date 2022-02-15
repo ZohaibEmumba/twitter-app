@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const PostSection = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e6ecf0;
-  width: 48%;
-  margin: 0 auto;
+  width: 94%;
 `;
 export const FirstPost = styled.div`
   display: flex;
