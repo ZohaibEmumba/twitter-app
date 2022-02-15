@@ -1,11 +1,10 @@
 import { Button } from "./style";
 
 const TwitterButton = (props : any) => {
-  const {name , styleBtn } = props;
-  console.log(styleBtn);
+  const {title , styleBtn , onClick  } = props;
   return (
-    <Button theme={styleBtn} >
-        {name}
+    <Button theme={styleBtn} onClick={onClick}>
+        {title}
     </Button>
   );
 };

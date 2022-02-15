@@ -12,6 +12,7 @@ import img from "../../assets/lohp.png";
 import logo from "../../assets/twitter-logo.png";
 import TwitterButton from "../common/Button/TwitterButton";
 import whiteTwitter from '../../assets/icons8-twitter-250.png'
+import { useState } from "react";
 
 const SignUpBtn = {
   bgcolor: "rgb(29, 155, 240)",
@@ -26,6 +27,9 @@ const SignInBtn = {
 }
 
 const Login = () => {
+  const handleClick = () => {
+    console.log("here I am clicked")
+  }
   return (
     <>
       <Wrapper>
@@ -50,9 +54,11 @@ const Login = () => {
               <Section style={{ height: "30px" }}></Section>
               <Section>
                 <TwitterButton
+                  title="Sign Up with phone or email"
+                  onClick={handleClick}
                   styleBtn={SignUpBtn}
                   btn={"orange"}
-                  name="Sign Up with phone or email" />
+                   />
 
                 <PrivacyText>
                   <p>By signing up, you are agree to the <a href="">Terms of Service </a>
@@ -63,8 +69,8 @@ const Login = () => {
               <Section style={{ marginTop: '40px' }}>
                 <h1>Already have an account?</h1>
                 <TwitterButton
+                  title="Sign in"
                   styleBtn={SignInBtn}
-                  name="Sign in"
                 />
 
               </Section>

@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
+export const MainSection=styled.section`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+`
 export const SideBar = styled.div`
-  width: 25%;
+  /* width: 25%;
   position: fixed;
   left: 0;
-  height: 100%;
+  height: 100%; */
   border-right: 1px solid #e6ecf0;
   
   ul {
@@ -45,8 +52,7 @@ export const SideBar = styled.div`
 `;
 
 export const SidebarBtn = styled.div` 
-    margin: 19px 12px;
-    width: 60%;
+    margin: 20px 20px;
   a {
     text-decoration: none;
     background: #1da1f2;
@@ -63,7 +69,11 @@ export const SidebarBtn = styled.div`
     }
   }
 `
-export const ProfileSection= styled.div`
-  color: white;
+export const ProfileButton= styled.div`
+  padding: 10px 10px;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 50px;
+  flex-direction: row;
 `
 

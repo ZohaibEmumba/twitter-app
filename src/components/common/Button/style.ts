@@ -15,7 +15,7 @@ export const Button = styled.button`
     color: ${props => props.theme.textcolor};
     font-weight: ${props => props.theme.fontwght};
     border: ${props => props.theme.border};
-
+    padding: ${props => props.theme.padding};
     
 
 

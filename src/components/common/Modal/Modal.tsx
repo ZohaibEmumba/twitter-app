@@ -25,15 +25,16 @@ const ModalWrapper: FC = (props) => {
   };
   return (
     <>
-      <ButtonWrapper>
-        <Tooltip title="Add Employee" placement="bottom">
+      {/* <ButtonWrapper>
+        <Tooltip title="SignUp " placement="bottom">
           <Button type="primary" onClick={showModal}>
             Sign Up
           </Button>
         </Tooltip>
-      </ButtonWrapper>
+      </ButtonWrapper> */}
+
       <Modal
-        title="ADD EMPLOYEE"
+        title="Sign Up"
         visible={visible}
         onOk={handleOk}
         confirmLoading={confirmLoading}
