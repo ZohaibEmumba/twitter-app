@@ -1,14 +1,11 @@
-import React from "react";
-// import { Link } from "react-router-dom";
 import { Button } from "./style";
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-const TwitterButton: React.FC = () => {
+const TwitterButton = (props : any) => {
+  const {name , styleBtn } = props;
+  console.log(styleBtn);
   return (
-    <Button>
-      {/* <Link className="btn" to="/"> */}
-        Tweet
-      {/* </Link> */}
+    <Button theme={styleBtn} >
+        {name}
     </Button>
   );
 };
