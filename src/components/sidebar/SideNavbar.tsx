@@ -13,6 +13,7 @@ import {
 import TwitterButton from "../common/Button/TwitterButton";
 import { IconWrapper, Img, MainSection, MainWrapper, MarginWrapper, NameWrapper, ProfileButton, SideBar, SidebarBtn, TextSpan, TextSpan1 } from "./style";
 import profileImg from "../../assets/zohaib.jpg";
+import { Link } from "react-router-dom";
 
 const TweetBtn = {
   bgcolor: "rgb(29, 155, 240)",
@@ -28,53 +29,63 @@ const SideNavbar = () => {
       <SideBar>
         <ul>
           <li>
-            <a href="">
+            <Link to='/home' className="twitter-logo">
               <FaTwitter className="icons logo" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="" className="hover-menu active">
+            <Link to="/home" className="hover-menu active navItem">
               <FaHome className="icons" />
-              Home
-            </a>
+              <span>Home </span>
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaHashtag className="icons" /> Explore
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaHashtag className="icons" /> 
+              <span>Explore</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaRegBell className="icons" /> Notifications
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaRegBell className="icons" /> 
+              <span>Notifications</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaRegEnvelope className="icons" /> Messages
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaRegEnvelope className="icons" />
+              <span>Messages</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaRegBookmark className="icons" /> Bookmarks
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaRegBookmark className="icons" />
+              <span>Bookmarks</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaClipboardList className="icons" /> Lists
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaClipboardList className="icons" />
+              <span>Lists</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaUserAlt className="icons" /> Profile
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaUserAlt className="icons" />
+              <span>Profile</span> 
+            </Link>
           </li>
           <li>
-            <a href=""  className="hover-menu">
-              <FaMehBlank className="icons" /> More
-            </a>
+            <Link to="/home"  className="hover-menu navItem">
+              <FaMehBlank className="icons" />
+              <span>More</span> 
+            </Link>
           </li>
           <SidebarBtn>
-            <TwitterButton title="Tweet" styleBtn={TweetBtn} />
+            <TwitterButton 
+              title="Tweet" 
+              styleBtn={TweetBtn} 
+              />
           </SidebarBtn>
         </ul>
       </SideBar>
@@ -88,7 +99,7 @@ const SideNavbar = () => {
               height="40px"
             />
           </div>
-
+          
           <NameWrapper>
             <div>
               <MarginWrapper>

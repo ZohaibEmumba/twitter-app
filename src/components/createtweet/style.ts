@@ -23,13 +23,14 @@ export const Createimg = styled.div`
   overflow: hidden;
   border-radius: 50%;
   align-self: baseline;
-}
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 `;
+
 export const Createinput = styled.div`
   padding-right:40px;
   input{
@@ -52,8 +53,7 @@ export const Createicons = styled.div`
   justify-content: center;
   align-items: center;
   span{
-    backgroundColor: black;
-    borderRadius : 50% ; 
+    border-radius : 50% ; 
     padding: 5px ;
     transition: .1s ease-in-out;
     &:hover{

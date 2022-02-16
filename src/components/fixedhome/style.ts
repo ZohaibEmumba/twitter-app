@@ -13,8 +13,6 @@ export const PostHome = styled.div`
   font-weight: 600;
   font-size: 18px;
   background: #fff;
-  border-right: 1px solid #e6ecf0;
-  border-left: 1px solid #e6ecf0;
   cursor:pointer;
 
 `
