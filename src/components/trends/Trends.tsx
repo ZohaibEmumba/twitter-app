@@ -1,23 +1,23 @@
 import React from 'react'
-import { CountryHeading, Key, KeywordHeading, KeywordName, KeywordTweets, TrendWrapper, Wrapper } from './style';
+import { CountryHeading, Key, KeywordHeading, KeywordName, KeywordTweets, ShowMore, TrendWrapper, Wrapper } from './style';
 
 const Trends = () => {
     const [state, setState] = React.useState([
         {
             id: 1,
-            country: "Trend in Pakistan",
+            country: "Trending in Pakistan",
             keyword: "ISPR",
             totalKeywords: "2000k",
         },
         {
             id: 2,
-            country: "Trend in Pakistan",
+            country: "Trending in Pakistan",
             keyword: "IMRANKAHN",
             totalKeywords: "6000k",
         },
         {
             id: 3,
-            country: "Trend in Pakistan",
+            country: "Trending in Pakistan",
             keyword: "YoutubeinPakistan",
             totalKeywords: "2560k",
         },
@@ -38,6 +38,9 @@ const Trends = () => {
                         <KeywordTweets>{keyword.totalKeywords}</KeywordTweets>
                     </TrendWrapper>
                 ))}
+                 <ShowMore>
+                       <span>Show More</span> 
+                </ShowMore>
             </Key>
         </div>
         </Wrapper>

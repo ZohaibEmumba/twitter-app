@@ -4,28 +4,30 @@ import FixedHome from "../components/fixedhome/FixedHome";
 import SearchBar from "../components/search/SearchBar";
 import SideNavbar from "../components/sidebar/SideNavbar";
 import Trends from "../components/trends/Trends";
-import { Section, Wrapper } from "./style";
+import { Main, Section, SideBarWrapper, Wrapper } from "./style";
 
 const Layout = () => {
   return (
     <Section>
-      <div style={{ display: "flex", justifyContent: "end" }}>
+      <SideBarWrapper >
         <SideNavbar />
-      </div>
-      <div>
-        <Wrapper>
-          <FixedHome />
-          <CreateTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-        </Wrapper>
-      </div>
-      <div>
-        <SearchBar />
-        <Trends />
-      </div>
+      </SideBarWrapper>
+      <Main>
+        <div>
+          <Wrapper>
+            <FixedHome />
+            <CreateTweet />
+            <DsiplayTweet />
+            <DsiplayTweet />
+            <DsiplayTweet />
+            <DsiplayTweet />
+          </Wrapper>
+          <div>
+            <SearchBar />
+            <Trends />
+          </div>
+        </div>
+      </Main>
     </Section>
   );
 };

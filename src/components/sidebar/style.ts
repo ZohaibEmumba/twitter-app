@@ -80,12 +80,13 @@ export const MainWrapper = styled.div`
   margin-right: 10px;
   align-self: flex-end;
   transition: 0.1s ease-in-out;
+  
 
   @media (max-width: 1100px) {
     width: 60px;
   }
   &:hover {
-    background-color: rgba(15, 20, 25, 0.1);
+    background-color: rgba(15, 20, 25, 0.2);
     cursor: pointer;
     border-radius: 50px;
   }

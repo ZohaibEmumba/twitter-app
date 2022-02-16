@@ -9,10 +9,11 @@ const tweetBtn = {
   textcolor: "white",
   fontwght: "700",
   border: "none",
-  padding: "0px 30px",
+  padding: "0px 25px",
 }
 
 const CreateTweet = () => {
+
   return (
     <Wrapper>
       <CreateSection>
@@ -48,3 +49,7 @@ const CreateTweet = () => {
 }
 
 export default CreateTweet
+
+function useState(arg0: boolean): [any, any] {
+  throw new Error('Function not implemented.')
+}

@@ -41,6 +41,7 @@ export const Createinput = styled.div`
       font-size: 22px;
       color: grey;
       margin-top: 18px;
+      
   }
 `;
 export const Createsecond = styled.div`
@@ -87,7 +88,7 @@ export const Createbtn = styled.div`
 export const HR = styled.hr` 
     width: 100% ; 
     opacity: .20;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-left: 5px;
     margin-top: 30px
 `

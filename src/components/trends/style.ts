@@ -5,15 +5,19 @@ export const Wrapper = styled.div`
   width: 18%;
   top: 80px;
   right: 290px;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;
 export const Key = styled.div`
   background: #f5f8fa;
-  border-radius: 5px;
+  border-radius: 20px;
   font-weight: 700;
 `;
 export const TrendWrapper = styled.div`
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 20px;
   &:hover {
     background-color: rgba(0, 0, 0, 0.03);
     cursor: pointer;
@@ -22,9 +26,8 @@ export const TrendWrapper = styled.div`
 export const KeywordHeading = styled.div`
   font-size: 20px;
   padding-bottom: 10px;
-
   padding-top: 16px;
-  padding-left: 10px;
+  padding-left: 20px;
 `;
 export const CountryHeading = styled.div`
   font-size: 14px;
@@ -41,3 +44,15 @@ export const KeywordTweets = styled.div`
   font-size: 14px;
   font-weight: 300;
 `;
+export const ShowMore = styled.div`
+  padding:20px ;
+  cursor: pointer ; 
+  span{
+    font-weight: 200;
+    color: #1ca0f1 ;
+  }
+  &:hover{
+    background-color : rgba(0 , 0 , 0 , 0.03);
+    border-radius: 5px;
+  }
+`
