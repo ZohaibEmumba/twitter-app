@@ -89,6 +89,7 @@ const SideNavbar = () => {
           </SidebarBtn>
         </ul>
       </SideBar>
+      
       <MainWrapper>
         <ProfileButton>
           <div>
@@ -99,7 +100,6 @@ const SideNavbar = () => {
               height="40px"
             />
           </div>
-          
           <NameWrapper>
             <div>
               <MarginWrapper>
@@ -120,12 +120,12 @@ const SideNavbar = () => {
               </MarginWrapper>
             </div>
           </NameWrapper>
-
           <IconWrapper>
             <FaEllipsisH />
           </IconWrapper>
         </ProfileButton>
       </MainWrapper>
+
     </MainSection>
   );
 };
