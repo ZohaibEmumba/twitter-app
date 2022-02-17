@@ -16,7 +16,7 @@ export const Key = styled.div`
   font-weight: 700;
 `;
 export const TrendWrapper = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding: 20px;
   &:hover {
     background-color: rgba(0, 0, 0, 0.03);

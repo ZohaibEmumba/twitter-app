@@ -4,13 +4,6 @@ import { CreateSection, Createfirst, Createimg, Createinput, Createsecond, Creat
 import img from '../../assets/zohaib.jpg'
 import TwitterButton from '../common/Button/TwitterButton'
 
-const tweetBtn = {
-  bgcolor: "rgb(29, 155, 240)",
-  textcolor: "white",
-  fontwght: "700",
-  border: "none",
-  padding: "0px 25px",
-}
 
 const CreateTweet = () => {
 
@@ -38,7 +31,7 @@ const CreateTweet = () => {
                 <span><FaCalendarCheck className="ic" /></span>
               </Createicons>
               <Createbtn>
-                <TwitterButton title="Tweet" styleBtn={tweetBtn} />
+                <TwitterButton title="Tweet" className="createTweet" />
               </Createbtn>
             </Createsecond>
           </Createinput>

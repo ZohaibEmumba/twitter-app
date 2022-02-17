@@ -14,23 +14,31 @@ import TwitterButton from "../common/Button/TwitterButton";
 import { IconWrapper, Img, MainSection, MainWrapper, MarginWrapper, NameWrapper, ProfileButton, SideBar, SidebarBtn, TextSpan, TextSpan1 } from "./style";
 import profileImg from "../../assets/zohaib.jpg";
 import { Link } from "react-router-dom";
+import { Popover } from "antd";
+import { useState } from "react";
+import PopOverButton from "./Button/ButtonContent";
+import PorpoverContent from "./content/PorpoverContent";
 
 const TweetBtn = {
-  bgcolor: "rgb(29, 155, 240)",
-  textcolor: "white",
-  fontwght: "700",
-  border: "none",
-  padding: "0px 90px",
+  
 };
 
 const SideNavbar = () => {
+  const [visible, setvisible] = useState(false);
+
+  const hide = () => {
+      setvisible(false)
+  };
+  const handleVisibleChange = (visible: boolean | ((prevState: boolean) => boolean)) => {
+    setvisible(visible);
+  };
   return (
     <MainSection>
       <SideBar>
         <ul>
           <li>
             <Link to='/home' className="twitter-logo">
-              <FaTwitter className="icons logo" />
+              <FaTwitter className="icons logo"/>
             </Link>
           </li>
           <li>
@@ -84,13 +92,23 @@ const SideNavbar = () => {
           <SidebarBtn>
             <TwitterButton 
               title="Tweet" 
+              className='tweetBtn'
               styleBtn={TweetBtn} 
               />
           </SidebarBtn>
         </ul>
       </SideBar>
       
-      <MainWrapper>
+      
+
+      <Popover
+        content={<PorpoverContent />}
+        title={<PopOverButton />}
+        trigger="click"
+        visible={visible}
+        onVisibleChange={handleVisibleChange}
+      >
+        <MainWrapper>
         <ProfileButton>
           <div>
             <Img
@@ -125,6 +143,7 @@ const SideNavbar = () => {
           </IconWrapper>
         </ProfileButton>
       </MainWrapper>
+      </Popover>
 
     </MainSection>
   );

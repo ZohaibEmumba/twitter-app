@@ -1,9 +1,10 @@
 import { Button } from "./style";
 
 const TwitterButton = (props : any) => {
-  const {title , styleBtn , onClick   } = props;
+  const {title , handleClick , className , handleBtnClick } = props;
+  
   return (
-    <Button theme={styleBtn} onClick={onClick} disabled>
+    <Button className={className} onClick={handleClick} >
         {title}
     </Button>
   );

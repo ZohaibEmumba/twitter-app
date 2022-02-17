@@ -23,26 +23,27 @@ export const SideBar = styled.div`
   ul li {
     width: 100%;
   }
-  ul li:first-child{
-    margin-bottom: 30px
+  ul li:first-child {
+    padding: 12px;
   }
   ul li .navItem {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #000;
-    padding: 18px 10px;
+    padding: 15px 10px;
     font-size: 20px;
 
     &:hover {
       background: #f7f9f9;
       border-radius: 30px;
-      width: 60%;
+      width: 70%;
     }
   }
-  ul li .twitter-logo{
-    margin-bottom:10px;
-    padding: 20px 12px;
+  ul li .twitter-logo {
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
     &:hover {
       background: #f7f9f9;
       border-radius: 30px;
@@ -64,6 +65,7 @@ export const SideBar = styled.div`
   }
   .logo {
     color: #1da1f2;
+    margin: 0;
   }
 `;
 
@@ -80,7 +82,6 @@ export const MainWrapper = styled.div`
   margin-right: 10px;
   align-self: flex-end;
   transition: 0.1s ease-in-out;
-  
 
   @media (max-width: 1100px) {
     width: 60px;
@@ -90,7 +91,6 @@ export const MainWrapper = styled.div`
     cursor: pointer;
     border-radius: 50px;
   }
-  
 `;
 export const Img = styled.img`
   border-radius: 50%;

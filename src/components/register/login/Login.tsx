@@ -7,38 +7,38 @@ import {
   FormSection,
   Span,
   PrivacyText,
+  ButtonDivWrapper,
 } from "./style";
-import img from "../../assets/lohp.png";
-import logo from "../../assets/twitter-logo.png";
-import TwitterButton from "../common/Button/TwitterButton";
-import whiteTwitter from '../../assets/icons8-twitter-250.png'
+import { Link } from "react-router-dom";
+import TwitterButton from "../../common/Button/TwitterButton";
+import img from "../../../assets/lohp.png";
+import logo from "../../../assets/twitter-logo.png";
+import whiteTwitter from "../../../assets/icons8-twitter-250.png";
 import { useState } from "react";
-
-const SignUpBtn = {
-  bgcolor: "rgb(29, 155, 240)",
-  textcolor: "white",
-  fontwght: '700',
-  border: "none",
-}
-
-const SignInBtn = {
-  bgcolor:"white",
-  textcolor:"black",
-  border:"1px solid lightGray"
-}
+import SignUp from "../signup/SignUp";
 
 const Login = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   const handleClick = () => {
-    console.log("here I am clicked")
-  }
+    setShowModal(true);
+  };
   return (
     <>
+    {
+      showModal && (<SignUp showModal={showModal} setShowModal={setShowModal} />)
+    }
       <Wrapper>
-        <img src={whiteTwitter} alt="" width="350px" height="350px" className="twitter-logo" />
         <ImgWrapper>
-          <img src={img} alt="Twitter-login-page" />
+          <img src={img} className='bg-image' alt="Twitter-login-page" />
+          <img
+          src={whiteTwitter}
+          alt=""
+          width="350px"
+          height="350px"
+          className="twitter-logo"
+        />
         </ImgWrapper>
-
 
         <FormSection>
           <FormWrapper>
@@ -51,41 +51,31 @@ const Login = () => {
             <Section>
               <Span className="sub-heading">Join Twitter Today</Span>
             </Section>
-            <div style={{ width: '350px' }}>
-              <Section style={{ height: "30px" }}></Section>
+
+            <ButtonDivWrapper>
+              <Section className="emptydiv"></Section>
               <Section>
                 <TwitterButton
                   title="Sign Up with phone or email"
-                  onClick={handleClick}
-                  styleBtn={SignUpBtn}
-                  btn={"orange"}
-                   />
-
+                  handleClick={handleClick}
+                  className="loginBtn"
+                />
                 <PrivacyText>
-                  <p>By signing up, you are agree to the <a href="">Terms of Service </a>
-                    and <a href="">Privacy Policy</a> , including <a href="">Cookie Use</a> .
+                  <p>
+                    By signing up, you are agree to the{" "}
+                    <Link to="/termsofService">Terms of Service </Link>
+                    and <Link to="/privacypolicy">Privacy Policy</Link> ,
+                    including <Link to="/cookieuse">Cookie Use</Link> .
                   </p>
                 </PrivacyText>
               </Section>
-              <Section style={{ marginTop: '40px' }}>
+              <Section className="belowSect">
                 <h1>Already have an account?</h1>
-                <TwitterButton
-                  title="Sign in"
-                  styleBtn={SignInBtn}
-                />
-
+                <TwitterButton title="Sign in" className="signinBtn" />
               </Section>
-            </div>
+            </ButtonDivWrapper>
           </FormWrapper>
         </FormSection>
-
-        {/* style={{
-                  backgroundColor: "white",
-                  color: "rgb(29,155,240)",
-                  border: "1px solid rgb(29,155,240)",
-                  fontSize: "20px",
-                  width: "50%",
-                }} */}
       </Wrapper>
       <LinkWrapper>
         <ul>

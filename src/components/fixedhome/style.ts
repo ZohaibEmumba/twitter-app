@@ -6,7 +6,7 @@ export const HomePage = styled.div`
 export const PostHome = styled.div` 
   display: flex;
   justify-content: space-between;
-  width: 33.3%;
+  width: 665px;
   position: fixed;
   top: 0;
   padding: 15px;
