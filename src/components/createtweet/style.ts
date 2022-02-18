@@ -64,7 +64,7 @@ export const Createicons = styled.div`
     }
   }
   .ic {
-    margin: 0 12px;
+    margin: 7px 12px;
     font-size: 20px;
     cursor: pointer;
     color: #1da1f2;

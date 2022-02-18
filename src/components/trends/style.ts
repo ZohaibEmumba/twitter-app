@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: fixed;
+  /* position: fixed;
   width: 18%;
   top: 80px;
-  right: 290px;
+  right: 290px; */
+  width: inherit;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;

@@ -33,6 +33,8 @@ export const PostImg = styled.div`
 `;
 export const PostName = styled.div`
   margin-left: 6px;
+  font-size: 18px;5
+  font-weight:500;
   .verify {
     margin-left: 3px;
     color: #1da1f2;

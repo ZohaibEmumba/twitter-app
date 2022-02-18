@@ -5,14 +5,14 @@ const SearchBar = () => {
   return (
     <SerarchSection>
       <Search>
+        <SearchIcon>
+          <FaSistrix className="search" />
+        </SearchIcon>
         <input
           type="text"
           className="trend__control"
           placeholder="Search Twitter"
         />
-        <SearchIcon>
-          <FaSistrix className="search" />
-        </SearchIcon>
       </Search>
     </SerarchSection>
   )

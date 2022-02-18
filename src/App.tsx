@@ -1,8 +1,8 @@
 import { useReducer } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./components/register/login/Login";
+import Login from "./components/register/Register";
 import { initialState, Reducer, TwitterContext } from "./context/TwitterContext";
-import Layout from "./pages/Layout";
+import Layout from "./pages/layout/Layout";
 import "./App.css";
 
 const App = () => {

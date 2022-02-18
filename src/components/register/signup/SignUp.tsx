@@ -72,8 +72,7 @@ const SignUp = (props: propsType) => {
             className="nextBtn"
             handleBtnClick={handleBtnClick}
             />
-              
-            
+  
           </Form.Item> 
         </Form>
       </ModalWrapper>

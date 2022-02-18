@@ -10,12 +10,12 @@ import {
   ButtonDivWrapper,
 } from "./style";
 import { Link } from "react-router-dom";
-import TwitterButton from "../../common/Button/TwitterButton";
-import img from "../../../assets/lohp.png";
-import logo from "../../../assets/twitter-logo.png";
-import whiteTwitter from "../../../assets/icons8-twitter-250.png";
+import TwitterButton from "../common/Button/TwitterButton";
+import img from "../../assets/lohp.png";
+import logo from "../../assets/twitter-logo.png";
+import whiteTwitter from "../../assets/icons8-twitter-250.png";
 import { useState } from "react";
-import SignUp from "../signup/SignUp";
+import SignUp from "./signup/SignUp";
 
 const Login = () => {
   const [showModal, setShowModal] = useState<boolean>(false);

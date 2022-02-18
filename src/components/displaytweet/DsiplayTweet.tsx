@@ -13,12 +13,12 @@ const DsiplayTweet = () => {
               <img src={img} alt="profile img" />
             </PostImg>
           </div>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex' , alignSelf: 'baseline' }}>
             <PostName>
-              <strong>Muhammad Zohaib</strong> <FaRegCheckCircle className="verify" />
+              <strong><span>Muhammad Zohaib</span> </strong> <FaRegCheckCircle className="verify" />
             </PostName>
             <PostUserName>
-              @zohaibEmumba <span>6m</span>
+              <span>@zohaibEmumba</span>  <span>6m</span>
             </PostUserName>
           </div>
         </FirstPost>
