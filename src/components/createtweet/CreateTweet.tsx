@@ -25,7 +25,9 @@ const CreateTweet = () => {
             <HR></HR>
             <Createsecond>
               <Createicons>
-                <span><FaRegImage className="ic" /></span>
+                <span>
+                  <FaRegImage className="ic" />
+                  </span>
                 <span><FaRegListAlt className="ic" /></span>
                 <span><FaRegSmile className="ic" /></span>
                 <span><FaCalendarCheck className="ic" /></span>

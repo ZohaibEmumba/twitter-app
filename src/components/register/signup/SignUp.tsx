@@ -1,13 +1,9 @@
 import { Form, Input, Row, DatePicker, Col } from "antd";
 import { useState } from "react";
+import { propsType } from "../../../types";
 import TwitterButton from "../../common/Button/TwitterButton";
 import ModalWrapper from "../../common/Modal/Modal";
 import { Heading, LinkButton } from "./style";
-
-type propsType = {
-  showModal: boolean;
-  setShowModal: any;
-};
 
 const SignUp = (props: propsType) => {
   const [change, setChange] = useState(false);

@@ -6,3 +6,10 @@ export type Action =
   }
   
 export type Dispatch = React.Dispatch<Action>;
+
+
+
+export type propsType = {
+  showModal: boolean;
+  setShowModal: any;
+};

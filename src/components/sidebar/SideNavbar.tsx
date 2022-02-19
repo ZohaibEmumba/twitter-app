@@ -19,13 +19,10 @@ import { useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 
-const TweetBtn = {
-  
-};
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState(false);
-
+  
   const hide = () => {
       setvisible(false)
   };
@@ -33,7 +30,8 @@ const SideNavbar = () => {
     setvisible(visible);
   };
   return (
-    <MainSection>
+    <>
+        <MainSection>
       <SideBar>
         <ul>
           <li>
@@ -93,7 +91,6 @@ const SideNavbar = () => {
             <TwitterButton 
               title="Tweet" 
               className='tweetBtn'
-              styleBtn={TweetBtn} 
               />
           </SidebarBtn>
         </ul>
@@ -107,6 +104,7 @@ const SideNavbar = () => {
         trigger="click"
         visible={visible}
         onVisibleChange={handleVisibleChange}
+        
       >
         <MainWrapper>
         <ProfileButton>
@@ -146,6 +144,7 @@ const SideNavbar = () => {
       </Popover>
 
     </MainSection>
+    </>
   );
 };
 
