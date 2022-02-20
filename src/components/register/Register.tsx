@@ -26,7 +26,7 @@ const Login = () => {
   return (
     <>
     {
-      showModal && (<SignUp showModal={showModal} setShowModal={setShowModal} />)
+      showModal && (<SignUp showModal={showModal} setShowModal={setShowModal} modalTitle="Sign Up" children={undefined} />)
     }
       <Wrapper>
         <ImgWrapper>

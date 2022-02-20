@@ -6,8 +6,8 @@ import ModalWrapper from '../../common/Modal/Modal'
     const { showModal, setShowModal } = props;
 
   return (
-    <ModalWrapper showModal={showModal} setShowModal={setShowModal}>
-        <div>Hello There....</div>
+    <ModalWrapper showModal={showModal} setShowModal={setShowModal}  modalTitle='Logout'>
+        <div>Hello Logout Modal there....</div>
     </ModalWrapper>
   )
 }

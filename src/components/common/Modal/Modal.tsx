@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { Modal } from "antd";
-
-type propsType = {
-  showModal: boolean;
-  setShowModal: any;
-  children: any;
-};
+import { propsType } from "../../../types";
 
 const ModalWrapper = (props: propsType) => {
-  const { showModal, setShowModal, children } = props;
+  const { showModal, setShowModal, children , modalTitle} = props;
   const [confirmLoading, setConfirmLoading] = useState<boolean>(false);
 
   const handleOk = () => {
@@ -20,7 +15,7 @@ const ModalWrapper = (props: propsType) => {
   return (
     <>
       <Modal
-        title="Sign Up"
+        title={modalTitle}
         visible={showModal}
         onOk={handleOk}
         confirmLoading={confirmLoading}

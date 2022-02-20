@@ -11,7 +11,7 @@ const PorpoverContent = () => {
   return (
     <>
     {
-      showModal && (<LogoutModal showModal={showModal} setShowModal={setShowModal} />  )
+      showModal && (<LogoutModal showModal={showModal} setShowModal={setShowModal} modalTitle='Logout' children={undefined} />  )
     }
 
     <Section>

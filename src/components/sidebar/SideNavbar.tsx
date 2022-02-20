@@ -19,7 +19,7 @@ import { useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
-import SignUp from "../register/signup/SignUp";
+import Notifications from "../notifications/Notifications";
 
 
 const SideNavbar = () => {
@@ -33,10 +33,15 @@ const SideNavbar = () => {
   const handleVisibleChange = (visible: boolean | ((prevState: boolean) => boolean)) => {
     setvisible(visible);
   };
+
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
   return (
     <>
      {
-      showModal && (<SignUp showModal={showModal} setShowModal={setShowModal} />)
+      showModal && (<Notifications showModal={showModal} setShowModal={setShowModal} modalTitle="Notifications" children={undefined} />)
     }
       <MainSection>
         <SideBar>
@@ -62,7 +67,7 @@ const SideNavbar = () => {
               <Link to="/home" className="hover-menu navItem">
                 <FaRegBell className="icons" />
                 <span>
-                 <TwitterButton > Notifications </TwitterButton>  
+                 <TwitterButton title='Notifications' handleClick={handleClick} className='none' />  
                   </span>
               </Link>
             </li>

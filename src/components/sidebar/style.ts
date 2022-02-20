@@ -37,7 +37,7 @@ export const SideBar = styled.div`
     &:hover {
       background: #f7f9f9;
       border-radius: 30px;
-      width: 70%;
+      width: 80%;
     }
   }
   ul li .twitter-logo {

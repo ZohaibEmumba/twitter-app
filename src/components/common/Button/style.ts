@@ -55,4 +55,9 @@ export const Button = styled.button`
        border: none;
    }
    
+   &.none{
+       border: none;
+       background-color: transparent;
+       font-size: 20px;
+   }
 `;
