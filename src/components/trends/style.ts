@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  /* position: fixed;
-  width: 18%;
-  top: 80px;
-  right: 290px; */
-  width: inherit;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1000px) {
     display: none;
@@ -15,6 +14,7 @@ export const Key = styled.div`
   background: #f5f8fa;
   border-radius: 20px;
   font-weight: 700;
+  width: 400px;
 `;
 export const TrendWrapper = styled.div`
   margin-bottom: 5px;

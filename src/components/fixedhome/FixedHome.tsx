@@ -6,7 +6,7 @@ const FixedHome = () => {
     <PostHome>
       <div> Home</div>
       <div>
-        <FaTwitter />
+        <FaTwitter className="twitter-logo" />
       </div>
     </PostHome>
   );

@@ -14,5 +14,10 @@ export const PostHome = styled.div`
   font-size: 18px;
   background: #fff;
   cursor:pointer;
-
+  border-bottom: 1px solid #e6ecf0;
+  
+  .twitter-logo{
+    color : #1d9bf0;
+  }
 `
+

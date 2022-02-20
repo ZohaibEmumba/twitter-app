@@ -58,7 +58,6 @@ const SignUp = (props: propsType) => {
             <Col span={12}>
               <DatePicker
                 placeholder="Select Date of Birth"
-                style={{ width: "470px" }}
               />
             </Col>
           </Row>

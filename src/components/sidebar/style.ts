@@ -7,7 +7,7 @@ export const MainSection = styled.section`
   height: 100%;
   justify-content: space-between;
   border-right: 1px solid #e6ecf0;
-  width: 295px;
+  // width: 295px;
 
   @media (max-width: 1100px) {
     width: 100px;
