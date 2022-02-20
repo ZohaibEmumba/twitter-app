@@ -3,7 +3,7 @@ import { Modal } from "antd";
 import { propsType } from "../../../types";
 
 const ModalWrapper = (props: propsType) => {
-  const { showModal, setShowModal, children , modalTitle} = props;
+  const { showModal, setShowModal, children , modalTitle } = props;
   const [confirmLoading, setConfirmLoading] = useState<boolean>(false);
 
   const handleOk = () => {

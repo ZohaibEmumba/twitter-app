@@ -3,11 +3,15 @@ import ModalWrapper from "../common/Modal/Modal";
 import Notification from "./notification/Notification";
 import { Section } from "./style";
 
+const style = {
+    padding: '0px'
+}
+
 const Notifications = (props : propsType) => {
  const { showModal, setShowModal } = props;
 
   return (
-    <ModalWrapper showModal={showModal} setShowModal={setShowModal} modalTitle="Notifications"  >
+    <ModalWrapper  showModal={showModal} setShowModal={setShowModal} modalTitle="Notifications" >
       <Section>
         <Notification />
         <Notification />

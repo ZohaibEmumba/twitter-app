@@ -4,6 +4,7 @@ import Login from "./components/register/Register";
 import { initialState, Reducer, TwitterContext } from "./context/TwitterContext";
 import Layout from "./pages/layout/Layout";
 import "./App.css";
+import LogoutModal from "./components/register/logoutWrapper/LogoutModal";
 
 const App = () => {
   const [state, dispatch] = useReducer(Reducer, initialState);
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Login/>} />
           <Route path="/home" element={<Layout />} />
+          <Route path="/logout" element={<LogoutModal showModal={false} setShowModal={undefined} children={undefined} modalTitle={""} />} />
         </Routes>
       </BrowserRouter>
     </div>
