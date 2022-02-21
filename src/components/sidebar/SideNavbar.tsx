@@ -34,30 +34,29 @@ import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
 
 const SideNavbar = () => {
-  const [visible, setvisible] = useState(false);
+  const [visible, setvisible] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const hide = () => {
     setvisible(false);
   };
-  const handleVisibleChange = (
-    visible: boolean | ((prevState: boolean) => boolean)
-  ) => {
+  const handleVisibleChange = (visible: boolean | ((prevState: boolean) => boolean)) => {
     setvisible(visible);
   };
-
   const handleClick = () => {
     setShowModal(true);
   };
 
   return (
     <>
-      {showModal && (
+      {
+      showModal && (
         <Notifications
-          showModal={showModal}
-          setShowModal={setShowModal}
-          modalTitle="Notifications"
-          children={undefined} />
+            showModal={showModal}
+            setShowModal={setShowModal}
+            modalTitle="Notifications"
+            children={undefined} 
+             />
       )}
       <MainSection>
         <SideBar>
@@ -74,13 +73,13 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/" className="hover-menu navItem">
                 <FaHashtag className="icons" />
                 <span>Explore</span>
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/notifications" className="hover-menu navItem">
                 <FaRegBell className="icons" />
                 <span>
                   <TwitterButton
@@ -92,25 +91,25 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/" className="hover-menu navItem">
                 <FaRegEnvelope className="icons" />
                 <span>Messages</span>
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/" className="hover-menu navItem">
                 <FaRegBookmark className="icons" />
                 <span>Bookmarks</span>
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/" className="hover-menu navItem">
                 <FaClipboardList className="icons" />
                 <span>Lists</span>
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/" className="hover-menu navItem">
                 <FaUserAlt className="icons" />
                 <span>Profile</span>
               </Link>
@@ -134,16 +133,16 @@ const SideNavbar = () => {
         </SideBar>
 
         <Popover
+          trigger="click"
           content={<PorpoverContent />}
           title={<PopOverButton />}
-          trigger="click"
           visible={visible}
           onVisibleChange={handleVisibleChange}
         >
           <MainWrapper>
             <ProfileButton>
               <div>
-                <Img src={profileImg} alt="" width="40px" height="40px" />
+                <Img src={profileImg} alt="profile logo" width="40px" height="40px" />
               </div>
               <NameWrapper>
                 <div>

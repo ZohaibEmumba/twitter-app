@@ -17,13 +17,13 @@ const ModalWrapper = (props: propsType) => {
       <Modal
         title={modalTitle}
         visible={showModal}
-        onOk={handleOk}
         confirmLoading={confirmLoading}
-        onCancel={() => setShowModal(false)}
         maskClosable={false}
+        onCancel={() => setShowModal(false)}
+        onOk={handleOk}
         footer
       >
-        {children}
+       {children}
       </Modal>
     </>
   );

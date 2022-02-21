@@ -13,5 +13,4 @@ export type propsType = {
   setShowModal: any;
   children: any;
   modalTitle: string;
-
 };

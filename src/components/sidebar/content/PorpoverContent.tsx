@@ -13,7 +13,6 @@ const PorpoverContent = () => {
     {
       showModal && (<LogoutModal showModal={showModal} setShowModal={setShowModal} modalTitle='Logout' children={undefined}  />  )
     }
-
     <Section>
             <input type="submit" value="Add an existing account" />
             <input type="submit" onClick={handleClick} value="Log out @Muhammad96638527" />

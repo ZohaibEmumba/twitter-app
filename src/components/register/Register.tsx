@@ -26,7 +26,7 @@ const Login = () => {
   return (
     <>
     {
-      showModal && (<SignUp showModal={showModal} setShowModal={setShowModal} modalTitle="Sign Up" children={undefined} />)
+      showModal &&  (<SignUp showModal={showModal} setShowModal={setShowModal} modalTitle="Sign Up" children={undefined} />)
     }
       <Wrapper>
         <ImgWrapper>
@@ -71,7 +71,11 @@ const Login = () => {
               </Section>
               <Section className="belowSect">
                 <h1>Already have an account?</h1>
-                <TwitterButton title="Sign in" className="signinBtn" />
+                <TwitterButton 
+                title="Sign in"
+                className="signinBtn"
+                handleClick={handleClick}
+                />
               </Section>
             </ButtonDivWrapper>
           </FormWrapper>

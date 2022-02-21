@@ -5,7 +5,7 @@ const Notification = () => {
   return (
     <NotificationWrapper>
       <div>
-        <Img src={zohaib} alt="zohaib logo" />
+        <Img src={zohaib} alt="Profile" />
       </div>
       <div>
         <div>

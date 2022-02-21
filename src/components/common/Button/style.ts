@@ -54,6 +54,28 @@ export const Button = styled.button`
        background-color:#878a8c ;
        border: none;
    }
+
+   &.logout{
+       background-color: rgb(15 , 20 , 25);
+       color:#fff;
+       padding: 10px 200px;
+       margin-top:20px;
+       border:none;
+
+       &:hover{
+        background-color: rgb(39 , 44 , 48);
+       }
+   }
+   &.cancel{
+        background-color:rgba(0, 0, 0, 0);
+        color:black;
+        padding: 10px 200px;
+        border:1px solid black;
+        font-weight: 600;
+        &:hover{
+            background-color: rgba(15 , 20 , 25 , 0.1);
+           }
+   }
    
    &.none{
        border: none;

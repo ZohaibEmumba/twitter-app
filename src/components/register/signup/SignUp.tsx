@@ -17,7 +17,10 @@ const SignUp = (props: propsType) => {
   }
   return (
     <>
-      <ModalWrapper showModal={showModal} setShowModal={setShowModal} modalTitle={""} >
+      <ModalWrapper 
+      showModal={showModal} 
+      setShowModal={setShowModal} 
+      modalTitle={"Sign Up"} >
         <Row style={{ paddingBottom: "20px" }}>
           <Heading>
             <strong>Create Your Account</strong>

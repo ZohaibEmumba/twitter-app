@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Section = styled.section`
     display: flex;
     flex-direction: column;
+    padding:0px !important;
+ 
      input{
          border: none;
          padding: 15px 15px;
@@ -14,4 +16,5 @@ export const Section = styled.section`
             cursor: pointer;
         }
      }   
+     
 `
