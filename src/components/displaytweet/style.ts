@@ -18,7 +18,13 @@ export const PostSection = styled.div`
 export const FirstPost = styled.div`
   display: flex;
   align-items: center;
-  gap:20px
+  gap:20px;
+  
+  .post-wrapper {
+    display: flex ; 
+    align-self: baseline ;
+  }
+
 `;
 export const PostImg = styled.div`
   width: 50px;
