@@ -53,13 +53,13 @@ const SideNavbar = () => {
   return (
     <>
       {
-      showModal && ( <Notifications
-            showModal={showModal}
-            setShowModal={setShowModal}
-            modalTitle="Notifications"
-            children={undefined} 
-             />
-      )}
+        showModal && (<Notifications
+          showModal={showModal}
+          setShowModal={setShowModal}
+          modalTitle="Notifications"
+          children={undefined}
+        />
+        )}
       <MainSection>
         <SideBar>
           <ul>
@@ -70,7 +70,7 @@ const SideNavbar = () => {
             </li>
             <li>
               <Link to="/home" className="hover-menu active navItem">
-               {true ? <FaHome className="icons" /> : <IoHomeOutline className="icons" /> } 
+                {true ? <FaHome className="icons" /> : <IoHomeOutline className="icons" />}
                 <span>Home </span>
               </Link>
             </li>

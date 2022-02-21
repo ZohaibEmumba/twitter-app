@@ -1,24 +1,22 @@
-import { useReducer } from "react";
+import { FC, useReducer } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/register/Register";
 import { initialState, Reducer, TwitterContext } from "./context/TwitterContext";
 import Layout from "./pages/layout/Layout";
 import "./App.css";
-import LogoutScreen from "./pages/logoutScreen/LogoutScreen";
-import LogoutModal from "./components/register/logoutWrapper/LogoutModal";
 
-const App = () => {
+const App:FC = () => {
   const [state, dispatch] = useReducer(Reducer, initialState);
   return (
-    <TwitterContext.Provider value={{ state, dispatch }}> 
-    <div className="App">  
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login/>} />
-          <Route path="/home" element={<Layout />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <TwitterContext.Provider value={{ state, dispatch }}>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Layout />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </TwitterContext.Provider>
   );
 };

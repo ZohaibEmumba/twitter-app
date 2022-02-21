@@ -41,10 +41,13 @@ export const Button = styled.button`
     }
    }
 
-   &.createTweet{
+   &.createTweetBtn{
     padding: 7px 20px;
     background-color: rgb(29, 155, 240);
     color: white ;
+    &:disabled {
+        background-color:lightgrey;
+    }
    }
 
    &.nextBtn{
