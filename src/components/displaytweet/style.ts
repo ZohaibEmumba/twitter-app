@@ -48,7 +48,7 @@ export const PostName = styled.div`
 `;
 export const PostUserName = styled.div`
   margin-left: 6px;
-  color: silver;
+  color: grey;
   font-weight: 300;
 
   span {
@@ -78,7 +78,39 @@ export const PostReactions = styled.div`
   justify-content: space-between;
   align-items: center;
   color: silver;
-  .re{
-    cursor: pointer;
+  margin-top:12px;
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    &.cmnt-icon{
+      transition: 0.3s ease;
+      &:hover{
+        color: rgb(29 , 155 , 240);
+      }
+    }
+    &.share-icon{
+      transition: 0.3s ease;
+      &:hover{
+        color: rgb(0 , 186 , 124);
+      }
+    }
+    &.heart-icon{
+      transition: 0.3s ease;
+      &:hover{
+        color: rgb(249 , 24 , 148);
+      }
+    }
+    &.leaf-icon{
+      transition: 0.3s ease;
+      &:hover{
+        color: rgb(29 , 155 , 240);
+      }
+    }
+ 
   }
+
+
 `;

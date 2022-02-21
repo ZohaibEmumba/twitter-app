@@ -4,6 +4,8 @@ import Login from "./components/register/Register";
 import { initialState, Reducer, TwitterContext } from "./context/TwitterContext";
 import Layout from "./pages/layout/Layout";
 import "./App.css";
+import LogoutScreen from "./pages/logoutScreen/LogoutScreen";
+import LogoutModal from "./components/register/logoutWrapper/LogoutModal";
 
 const App = () => {
   const [state, dispatch] = useReducer(Reducer, initialState);

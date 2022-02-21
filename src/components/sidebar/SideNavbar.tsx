@@ -43,15 +43,14 @@ const SideNavbar = () => {
   const handleVisibleChange = (visible: boolean | ((prevState: boolean) => boolean)) => {
     setvisible(visible);
   };
-  const handleClick = () => {
+  const handleNotificationClick = () => {
     setShowModal(true);
   };
 
   return (
     <>
       {
-      showModal && (
-        <Notifications
+      showModal && ( <Notifications
             showModal={showModal}
             setShowModal={setShowModal}
             modalTitle="Notifications"
@@ -79,12 +78,12 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/notifications" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <FaRegBell className="icons" />
                 <span>
                   <TwitterButton
                     title="Notifications"
-                    handleClick={handleClick}
+                    handleClick={handleNotificationClick}
                     className="none"
                   ></TwitterButton>
                 </span>

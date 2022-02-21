@@ -1,15 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import { propsType } from "../../../types";
 import ModalWrapper from "../../common/Modal/Modal";
 import { Wrapper } from "./style";
 import Logo from '../../../assets/twitter-logo.png';
 import TwitterButton from "../../common/Button/TwitterButton";
 
+
 const LogoutModal = (props: propsType) => {
   const { showModal, setShowModal } = props;
+  const navigate = useNavigate();
 
-  const handleClick = () => {
-    alert("hello")
-  }
+  const handleLogOutBtn = () => navigate('/'); 
+  const handleCancelBtn = () => setShowModal(false);
 
   return (
     <ModalWrapper
@@ -27,10 +29,10 @@ const LogoutModal = (props: propsType) => {
           </span>
         </div>
         <div>
-          <TwitterButton title="Log Out" className='logout' handleClick={handleClick} />
+          <TwitterButton title="Log Out" className='logout' handleClick={handleLogOutBtn} />
         </div>
         <div>
-          <TwitterButton title="Cancel" className='cancel' />
+          <TwitterButton title="Cancel" className='cancel' handleClick={handleCancelBtn}  />
         </div>
       </Wrapper>
     </ModalWrapper>

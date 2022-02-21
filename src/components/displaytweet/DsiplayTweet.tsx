@@ -1,4 +1,4 @@
-import { FaRegCheckCircle, FaComment, FaRegChartBar, FaHeart, FaLeaf } from 'react-icons/fa'
+import { FaRegCheckCircle, FaComment, FaRegChartBar, FaHeart, FaLeaf, FaEllipsisH } from 'react-icons/fa'
 import img from '../../assets/zohaib.jpg'
 import pakistanImg from '../../assets/Pakistan.jpg'
 import { FirstPost, PostDetails, PostImg, PostImgDetails, PostName, PostReactions, PostSection, PostUserName, WholeWrapper } from './style'
@@ -18,8 +18,11 @@ const DsiplayTweet = () => {
               <strong><span>Muhammad Zohaib</span> </strong> <FaRegCheckCircle className="verify" />
             </PostName>
             <PostUserName>
-              <span>@zohaibEmumba</span>  <span>6m</span>
+              <span>@zohaibEmumba</span> . <span>6m</span>
             </PostUserName>
+          </div>
+          <div>
+            <FaEllipsisH />
           </div>
         </FirstPost>
         <PostDetails>
@@ -33,18 +36,24 @@ const DsiplayTweet = () => {
             <img src={pakistanImg} alt="post" />
           </PostImgDetails>
           <PostReactions>
-            <span>
-              <FaComment className="re" /> 45
-            </span>
-            <span>
-              <FaRegChartBar className="re" /> 4
-            </span>
-            <span>
-              <FaHeart className="re" /> 345
-            </span>
-            <span>
-              <FaLeaf className="re" /> 234
-            </span>
+            <div className="cmnt-icon">
+              <span >
+                <FaComment  /> 
+              </span>
+              <span>45</span> 
+            </div>
+            <div className="share-icon">
+              <FaRegChartBar  /> 
+              <span>4</span>
+            </div>
+            <div className="heart-icon" >
+              <FaHeart /> 
+             <span>345</span> 
+            </div>
+            <div  className="leaf-icon">
+              <FaLeaf /> 
+              <span>234</span>
+            </div>
           </PostReactions>
         </PostDetails>
 
