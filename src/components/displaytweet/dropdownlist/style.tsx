@@ -5,6 +5,7 @@ export const MenuWrapper = styled(Menu)`
     .padding{
         width: 300px;
         padding : 15px;
+       
     }
     .link-padding{
         display: flex ;

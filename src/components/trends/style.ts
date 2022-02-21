@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: fixed;
+  top:7%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,36 +12,57 @@ export const Wrapper = styled.div`
   }
 `;
 export const Key = styled.div`
-  background: #f5f8fa;
+  background: #eff3f4;
   border-radius: 20px;
   font-weight: 700;
   width: 400px;
 `;
 export const TrendWrapper = styled.div`
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
   margin-bottom: 5px;
   padding: 20px;
   &:hover {
     background-color: rgba(0, 0, 0, 0.03);
     cursor: pointer;
   }
+  div:nth-child(2){
+    span{
+      &:hover{
+        color: #1ca0f1;
+      }
+    }
+  }
 `;
 export const KeywordHeading = styled.div`
+  display:flex;
+  justify-content: space-between;
+  margin-right: 25px;
   font-size: 20px;
   padding-bottom: 10px;
   padding-top: 16px;
   padding-left: 20px;
+
+  .setting-icon{
+    font-size:20px;
+    &:hover{
+      cursor:pointer;
+      color:grey;
+      border-radius: 50%;
+    }
+  }
+
 `;
 export const CountryHeading = styled.div`
   font-size: 14px;
   color: silver;
   font-weight: 200;
-  margin: 10px 0;
 `;
 export const KeywordName = styled.div`
-  margin-bottom: 8px;
+  
 `;
 export const KeywordTweets = styled.div`
-  margin-top: 7px;
   color: silver;
   font-size: 14px;
   font-weight: 300;

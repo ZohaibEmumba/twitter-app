@@ -6,7 +6,7 @@ import { Dropdown, Popover } from 'antd'
 import { menu } from './dropdownlist/MenuList'
 import { IoChatbubbleOutline, IoCloudUploadOutline, IoHeartOutline, IoRepeatSharp } from "react-icons/io5";
 import PopoverContent from './popover-content/PopoverContent'
-import { NAME, USERNAME } from '../../constants'
+import { DEMO_TEXT, NAME, USERNAME } from '../../constants'
 
 const DsiplayTweet = () => {
   return (
@@ -49,10 +49,7 @@ const DsiplayTweet = () => {
         </FirstPost>
         <PostDetails>
           <PostImgDetails>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima id
-            iure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere
-            aliquid dolores placeat vitae accusamus excepturi officiis magnam
-            pariatur?
+            {DEMO_TEXT}
           </PostImgDetails>
           <PostImgDetails>
             <img src={pakistanImg} alt="post" />

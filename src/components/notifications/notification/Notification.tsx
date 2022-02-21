@@ -1,5 +1,6 @@
 import { Img, NotificationWrapper } from "./style";
 import zohaib from "../../../assets/zohaib.jpg";
+import { TEXT, TIME } from "../../../constants";
 
 const Notification = () => {
   return (
@@ -9,10 +10,10 @@ const Notification = () => {
       </div>
       <div>
         <div>
-          <span className="text">This Person reacted to your post</span>
+          <span className="text">{TEXT}</span>
         </div>
         <div>
-          <span className="time">About an hour ago</span>
+          <span className="time">{TIME}</span>
         </div>
       </div>
     </NotificationWrapper>

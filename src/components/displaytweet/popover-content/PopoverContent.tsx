@@ -1,7 +1,7 @@
 import { Wrapper } from "./style"
 import zohaib from '../../../assets/zohaib.jpg'
 import TwitterButton from "../../common/Button/TwitterButton"
-import { NAME, USERNAME } from "../../../constants"
+import { DESP, FOLLOWERE, FOLLOWING, NAME, USERNAME } from "../../../constants"
 
 const PopoverContent = () => {
     return (
@@ -20,12 +20,12 @@ const PopoverContent = () => {
             </div>
             <div>
                 <span>
-                    PTI | Professor UI | PhD in Leadership
+                    {DESP}
                 </span>
             </div>
             <div className="follower-sect">
-                <span>278k</span> Following
-                <span>27k</span> Followers
+                <span>{FOLLOWING}</span> Following
+                <span>{FOLLOWERE}</span> Followers
             </div>
         </Wrapper>
     )

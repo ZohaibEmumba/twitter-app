@@ -7,20 +7,21 @@ import { Tooltip } from 'antd'
 
 
 const CreateTweet: FC = () => {
+  const [postText, setPostText] = useState<any>({})
   const [disable, setDisable] = useState<boolean>(true)
 
   const handleCreateTweet = () => {
-    alert('alert')
+    alert(postText)
   }
   const handleInputChange = (e: { target: any }) => {
     if (e.target.value.length > 0) {
-      setDisable(false)
+      setDisable(false);
+      setPostText(e.target.value);
     }
     else {
       setDisable(true)
     }
   }
-
   return (
     <Wrapper>
       <CreateSection>
