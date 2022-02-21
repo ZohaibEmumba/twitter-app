@@ -10,6 +10,7 @@ import {
   FaMehBlank,
   FaEllipsisH,
 } from "react-icons/fa";
+import { VscSymbolNumeric } from "react-icons/vsc";
 import TwitterButton from "../common/Button/TwitterButton";
 import {
   IconWrapper,
@@ -32,6 +33,8 @@ import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
+import { NAME } from "../../constants";
+import { IoAddCircleOutline, IoHomeOutline, IoNewspaperOutline, IoPersonOutline } from "react-icons/io5";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
@@ -67,13 +70,13 @@ const SideNavbar = () => {
             </li>
             <li>
               <Link to="/home" className="hover-menu active navItem">
-                <FaHome className="icons" />
+               {true ? <FaHome className="icons" /> : <IoHomeOutline className="icons" /> } 
                 <span>Home </span>
               </Link>
             </li>
             <li>
               <Link to="/" className="hover-menu navItem">
-                <FaHashtag className="icons" />
+                <VscSymbolNumeric className="icons" />
                 <span>Explore</span>
               </Link>
             </li>
@@ -103,13 +106,13 @@ const SideNavbar = () => {
             </li>
             <li>
               <Link to="/" className="hover-menu navItem">
-                <FaClipboardList className="icons" />
+                <IoNewspaperOutline className="icons" />
                 <span>Lists</span>
               </Link>
             </li>
             <li>
               <Link to="/" className="hover-menu navItem">
-                <FaUserAlt className="icons" />
+                <IoPersonOutline className="icons" />
                 <span>Profile</span>
               </Link>
             </li>
@@ -120,7 +123,7 @@ const SideNavbar = () => {
                 placement="topCenter"
               >
                 <Link to="/home" className="hover-menu navItem">
-                  <FaMehBlank className="icons" />
+                  <IoAddCircleOutline className="icons" />
                   <span>More</span>
                 </Link>
               </Dropdown>
@@ -148,7 +151,7 @@ const SideNavbar = () => {
                   <MarginWrapper>
                     <span>
                       <TextSpan>
-                        <strong>Muhammad Zohaib </strong>
+                        <strong>{NAME}</strong>
                       </TextSpan>
                     </span>
                   </MarginWrapper>

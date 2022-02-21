@@ -76,7 +76,12 @@ export const Button = styled.button`
             background-color: rgba(15 , 20 , 25 , 0.1);
            }
    }
-   
+   &.followBtn{
+       padding:10px 20px;
+       background-color:black;
+       border:none;
+       color: #fff;
+   }
    &.none{
        border: none;
        background-color: transparent;

@@ -9,7 +9,7 @@ export const WholeWrapper = styled.div`
     cursor: pointer;
     background-color: #e6ecf0;
   }
-` 
+`
 export const PostSection = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e6ecf0;
@@ -18,11 +18,23 @@ export const PostSection = styled.div`
 export const FirstPost = styled.div`
   display: flex;
   align-items: center;
-  gap:20px;
-  
+  gap:10px;
   .post-wrapper {
     display: flex ; 
     align-self: baseline ;
+  }
+  div:nth-child(3){
+    align-self: flex-start;
+    margin-left: 25%;
+
+    .dot-icon{
+      color:gray;
+      transition: 0.3s ease;
+      &:hover{
+        color: rgb(29 , 155 , 240);
+
+      }
+    }
   }
 
 `;
@@ -45,6 +57,11 @@ export const PostName = styled.div`
     margin-left: 3px;
     color: #1da1f2;
   }
+  span{
+    &:hover{
+      border-bottom: 1px solid grey;
+    }
+  }
 `;
 export const PostUserName = styled.div`
   margin-left: 6px;
@@ -58,7 +75,7 @@ export const PostUserName = styled.div`
   }
 `;
 export const PostDetails = styled.div`
-  margin: 8px 73px;
+  margin: 0px 73px;
   overflow: hidden;
 `;
 
@@ -87,23 +104,27 @@ export const PostReactions = styled.div`
 
     &.cmnt-icon{
       transition: 0.3s ease;
+      font-size:15px;
       &:hover{
         color: rgb(29 , 155 , 240);
       }
     }
     &.share-icon{
+      font-size:15px;
       transition: 0.3s ease;
       &:hover{
         color: rgb(0 , 186 , 124);
       }
     }
     &.heart-icon{
+      font-size:15px;
       transition: 0.3s ease;
       &:hover{
         color: rgb(249 , 24 , 148);
       }
     }
     &.leaf-icon{
+      font-size:15px;
       transition: 0.3s ease;
       &:hover{
         color: rgb(29 , 155 , 240);

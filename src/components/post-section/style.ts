@@ -8,4 +8,22 @@ export const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     column-gap: 15px;
+
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    div:nth-child(2) {
+        input{
+            width: 415px ;
+            border: none ;
+            padding: 20px ;
+        }
+        .border-div{
+            border: .3px solid lightblue;
+        }
+    }
+
 `

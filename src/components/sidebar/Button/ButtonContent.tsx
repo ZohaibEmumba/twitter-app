@@ -1,6 +1,7 @@
 import { FaCheck } from 'react-icons/fa'
 import { MainWrapper, ProfileButton, Img, NameWrapper, MarginWrapper, TextSpan, TextSpan1, IconWrapper } from './style'
 import profileImg from "../../../assets/zohaib.jpg";
+import { NAME } from '../../../constants';
 
 const PopOverButton = () => {
   return (
@@ -19,7 +20,7 @@ const PopOverButton = () => {
           <MarginWrapper>
             <span>
               <TextSpan>
-                <strong>Muhammad Zohaib </strong>
+                <strong>{NAME}</strong>
               </TextSpan>
             </span>
         </MarginWrapper>
