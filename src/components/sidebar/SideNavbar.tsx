@@ -53,7 +53,7 @@ const SideNavbar = () => {
   return (
     <>
       {
-        showModal && (<Notifications
+        showModal  && (<Notifications
           showModal={showModal}
           setShowModal={setShowModal}
           modalTitle="Notifications"

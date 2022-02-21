@@ -4,34 +4,39 @@ import FixedHome from "../../components/fixedhome/FixedHome";
 import SearchBar from "../../components/search/SearchBar";
 import SideNavbar from "../../components/sidebar/SideNavbar";
 import Trends from "../../components/trends/Trends";
-import {  EndWrapper, MiddleWrapper, Section, SideBarWrapper, Wrapper } from "./style";
+import {
+  EndWrapper,
+  MiddleWrapper,
+  Section,
+  SideBarWrapper,
+  Wrapper,
+} from "./style";
 
 const Layout = () => {
   return (
     <Section>
-            <SideBarWrapper>
-              <SideNavbar />
-            </SideBarWrapper>
-      
-            <MiddleWrapper>
-              <Wrapper>
-                <FixedHome />
-                <CreateTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-                <DsiplayTweet />
-              </Wrapper>
-            </MiddleWrapper>
+      <SideBarWrapper>
+        <SideNavbar />
+      </SideBarWrapper>
 
-            <EndWrapper>
-              <SearchBar />
-              <Trends />
-            </EndWrapper>
-            
+      <MiddleWrapper>
+        {/* <Wrapper> */}
+          <FixedHome />
+          <CreateTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+          <DsiplayTweet />
+        {/* </Wrapper> */}
+      </MiddleWrapper>
+
+      <EndWrapper>
+        <SearchBar />
+        <Trends />
+      </EndWrapper>
     </Section>
   );
 };
