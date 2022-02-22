@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/twitter-app/static/css/main.a4865182.css",
+    "main.js": "/twitter-app/static/js/main.fb6f2788.js",
+    "static/media/Pakistan.jpg": "/twitter-app/static/media/Pakistan.08e02cc453ba6106efb3.jpg",
+    "static/media/lohp.png": "/twitter-app/static/media/lohp.ee316e0d2358e67d5ee2.png",
+    "static/media/zohaib.jpg": "/twitter-app/static/media/zohaib.a0f6c677cc1dacd78a4c.jpg",
+    "static/media/twitter-logo.png": "/twitter-app/static/media/twitter-logo.f7dc038aba0699a2c477.png",
+    "index.html": "/twitter-app/index.html",
+    "main.a4865182.css.map": "/twitter-app/static/css/main.a4865182.css.map",
+    "main.fb6f2788.js.map": "/twitter-app/static/js/main.fb6f2788.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4865182.css",
+    "static/js/main.fb6f2788.js"
+  ]
+}
