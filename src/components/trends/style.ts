@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: fixed;
-  top:9%;
+  position: fixed; 
+  top:11%; 
   height: 100%;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 992px) {
     display: none;
   }
+  @media (max-height: 800px) {
+    top:13%;
+    } 
+
+    @media (max-height: 576px) {
+    top:20%;
+    } 
 `;
 export const Key = styled.div`
   background: #eff3f4;

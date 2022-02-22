@@ -16,6 +16,8 @@ export const Createfirst = styled.section`
   align-items: center;
   margin: 0 5px;
   padding: 0 15px;
+  gap: 15px;
+  
 `;
 export const Createimg = styled.div`
   width: 50px;

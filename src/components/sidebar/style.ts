@@ -7,11 +7,11 @@ export const MainSection = styled.section`
   height: 100%;
   justify-content: space-between;
   border-right: 1px solid #e6ecf0;
-  // width: 295px;
 
   @media (max-width: 1100px) {
     width: 100px;
   }
+  
 `;
 export const SideBar = styled.div`
   ul {
@@ -23,9 +23,14 @@ export const SideBar = styled.div`
   ul li {
     width: 100%;
   }
-  ul li:first-child {
+  /* ul li:first-child {
     padding: 12px;
-  }
+    @media (max-height: 800px) {
+    padding: 0px;
+
+} 
+  }*/
+
   ul li .navItem {
     display: flex;
     align-items: center;
@@ -39,6 +44,16 @@ export const SideBar = styled.div`
       border-radius: 30px;
       width: 80%;
     }
+
+    @media (max-height: 800px) {
+        padding: 10px 10px;
+    } 
+
+    @media (max-height: 600px) {
+        overflow-y: scroll;
+        padding: 10px 10px;
+    } 
+
   }
   ul li .twitter-logo {
     display: flex;
@@ -71,7 +86,7 @@ export const SideBar = styled.div`
 
 export const SidebarBtn = styled.div`
   margin: 20px 20px;
-  @media (max-width: 1100px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;
@@ -100,7 +115,7 @@ export const NameWrapper = styled.div`
   align-self: center;
   margin-left: 10px;
   margin-right: 10px;
-  @media (max-width: 1100px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;
@@ -119,7 +134,7 @@ export const IconWrapper = styled.div`
   align-self: center;
   cursor: pointer;
   color: grey;
-  @media (max-width: 1100px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;

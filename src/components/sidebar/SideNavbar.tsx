@@ -1,13 +1,9 @@
 import {
   FaTwitter,
   FaHome,
-  FaHashtag,
   FaRegBell,
   FaRegEnvelope,
   FaRegBookmark,
-  FaClipboardList,
-  FaUserAlt,
-  FaMehBlank,
   FaEllipsisH,
 } from "react-icons/fa";
 import { VscSymbolNumeric } from "react-icons/vsc";
@@ -33,33 +29,40 @@ import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
-import { NAME } from "../../constants";
-import { IoAddCircleOutline, IoHomeOutline, IoNewspaperOutline, IoPersonOutline } from "react-icons/io5";
+import { NAME, USERNAME } from "../../constants";
+import {
+  IoAddCircleOutline,
+  IoHomeOutline,
+  IoNewspaperOutline,
+  IoPersonOutline,
+} from "react-icons/io5";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
+  
 
-  const hide = () => {
-    setvisible(false);
-  };
-  const handleVisibleChange = (visible: boolean | ((prevState: boolean) => boolean)) => {
+  // const hide = () => {
+  //   setvisible(false);
+  // };
+  const handleVisibleChange = (
+    visible: boolean | ((prevState: boolean) => boolean)
+  ) => {
     setvisible(visible);
   };
-  const handleNotificationClick = () => {
-    setShowModal(true);
-  };
+  const handleNotificationClick = () => setShowModal(true);
+  const handleTweetBtn = () => setShowModal(true);
 
   return (
     <>
-      {
-        showModal  && (<Notifications
+      {showModal && (
+        <Notifications
           showModal={showModal}
           setShowModal={setShowModal}
           modalTitle="Notifications"
           children={undefined}
         />
-        )}
+      )}
       <MainSection>
         <SideBar>
           <ul>
@@ -70,7 +73,11 @@ const SideNavbar = () => {
             </li>
             <li>
               <Link to="/home" className="hover-menu active navItem">
-                {true ? <FaHome className="icons" /> : <IoHomeOutline className="icons" />}
+                {true ? (
+                  <FaHome className="icons" />
+                ) : (
+                  <IoHomeOutline className="icons" />
+                )}
                 <span>Home </span>
               </Link>
             </li>
@@ -129,7 +136,11 @@ const SideNavbar = () => {
               </Dropdown>
             </li>
             <SidebarBtn>
-              <TwitterButton title="Tweet" className="tweetBtn" />
+              <TwitterButton
+                title="Tweet"
+                className="tweetBtn"
+                handleClick={handleTweetBtn}
+              />
             </SidebarBtn>
           </ul>
         </SideBar>
@@ -144,7 +155,12 @@ const SideNavbar = () => {
           <MainWrapper>
             <ProfileButton>
               <div>
-                <Img src={profileImg} alt="profile logo" width="40px" height="40px" />
+                <Img
+                  src={profileImg}
+                  alt="profile logo"
+                  width="40px"
+                  height="40px"
+                />
               </div>
               <NameWrapper>
                 <div>
@@ -159,7 +175,7 @@ const SideNavbar = () => {
                 <div>
                   <MarginWrapper>
                     <span>
-                      <TextSpan1>@MuhammadZohaib</TextSpan1>
+                      <TextSpan1>{USERNAME}</TextSpan1>
                     </span>
                   </MarginWrapper>
                 </div>

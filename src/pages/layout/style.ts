@@ -6,8 +6,8 @@ export const Section = styled.section`
     height: 100vh;       
 `
 export const Wrapper = styled.div`
-    /* max-width: 666px; */
-` 
+     max-width: 666px; 
+`
 export const SideBarWrapper = styled.div`
     display: flex ;
     justify-content: end ; 
@@ -16,6 +16,6 @@ export const MiddleWrapper = styled.div`
     max-width: 666px;
 `
 export const EndWrapper = styled.div`
-    /* max-width: 400px; */
+    max-width: 400px; 
     margin: 20px;
 `

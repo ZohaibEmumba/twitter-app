@@ -6,7 +6,7 @@ export const HomePage = styled.div`
 export const PostHome = styled.div` 
   display: flex;
   justify-content: space-between;
-  width: 665px;
+  width: 645px;
   position: fixed;
   top: 0;
   padding: 15px;
@@ -14,7 +14,6 @@ export const PostHome = styled.div`
   font-size: 18px;
   background: #fff;
   cursor:pointer;
-  // border-bottom: 1px solid #e6ecf0;
   
   .twitter-logo{
     color : #1d9bf0;
