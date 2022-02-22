@@ -58,7 +58,7 @@ const SideNavbar = () => {
       {showModal && (
         <Notifications
           showModal={showModal}
-          setShowModal={setShowModal}
+          setShowModal={setShowModal} 
           modalTitle="Notifications"
           children={undefined}
         />
