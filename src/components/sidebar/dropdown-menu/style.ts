@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const MenuWrapper = styled(Menu)`
     .padding{
-        width: 300px;
+        width: 250px;
         padding : 15px;
     }
     .link-padding{

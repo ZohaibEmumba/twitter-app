@@ -4,6 +4,7 @@ import ModalWrapper from "../../common/Modal/Modal";
 import { Wrapper } from "./style";
 import Logo from '../../../assets/twitter-logo.png';
 import TwitterButton from "../../common/Button/TwitterButton";
+import { LOGOUT, LOGOUT_PARA } from '../../../constants';
 
 
 const LogoutModal = (props: propsType) => {
@@ -21,11 +22,11 @@ const LogoutModal = (props: propsType) => {
       <Wrapper>
         <img src={Logo} alt="logo" width='40px' height='40px' />
         <div>
-          <span className="heading">Log out of Twitter?</span>
+          <span className="heading">{LOGOUT}</span>
         </div>
         <div>
           <span>
-            You can always log back in at any time. If you just want to switch accounts, you can do that by adding an existing account.
+            {LOGOUT_PARA}
           </span>
         </div>
         <div>

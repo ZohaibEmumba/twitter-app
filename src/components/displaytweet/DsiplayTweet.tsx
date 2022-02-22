@@ -49,7 +49,7 @@ const DsiplayTweet = () => {
             </PostUserName>
           </div>
           <div>
-            <Dropdown overlay={menu} trigger={["click"]} placement="topRight">
+            <Dropdown overlay={menu} trigger={["click"]} placement="bottomRight">
               <FaEllipsisH className="dot-icon" />
             </Dropdown>
           </div>

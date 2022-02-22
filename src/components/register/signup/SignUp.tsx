@@ -1,9 +1,10 @@
-import { Form, Input, Row, DatePicker, Col } from "antd";
+import { Form, Input, DatePicker, Col } from "antd";
 import { useState } from "react";
+import { CREATE_ACC, DOB, SIGNUP_PARA } from "../../../constants";
 import { propsType } from "../../../types";
 import TwitterButton from "../../common/Button/TwitterButton";
 import ModalWrapper from "../../common/Modal/Modal";
-import { Heading, LinkButton } from "./style";
+import { Heading, LinkButton, RowStyle } from "./style";
 
 const SignUp = (props: propsType) => {
   const [change, setChange] = useState(false);
@@ -13,19 +14,20 @@ const SignUp = (props: propsType) => {
     setChange(!change);
   };
   const handleBtnClick = () => {
-    alert("hello")
-  }
+    alert("hello");
+  };
   return (
     <>
-      <ModalWrapper 
-      showModal={showModal} 
-      setShowModal={setShowModal} 
-      modalTitle={"Sign Up"} >
-        <Row style={{ paddingBottom: "20px" }}>
+      <ModalWrapper
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalTitle={"Sign Up"}
+      >
+        <RowStyle className="padding-row">
           <Heading>
-            <strong>Create Your Account</strong>
+            <strong>{CREATE_ACC}</strong>
           </Heading>
-        </Row>
+        </RowStyle>
         <Form
           name="basic"
           initialValues={{ remember: true }}
@@ -43,35 +45,29 @@ const SignUp = (props: propsType) => {
             )}
           </Form.Item>
 
-          <Row style={{ paddingBottom: "20px" }}>
+          <RowStyle className="padding-row">
             <LinkButton onClick={handleClick}>
               <span>Use {change ? "phone" : "email"} instead</span>
             </LinkButton>
-          </Row>
-          <Row>
+          </RowStyle>
+          <RowStyle>
             <Heading>
-              <strong>Date of birth</strong>
+              <strong>{DOB}</strong>
             </Heading>
-            <p>
-              This will not be shown publicly. Confirm your own age, even if
-              this account is for a business, a pet, or something else.
-            </p>
-          </Row>
-          <Row>
+            <p>{SIGNUP_PARA}</p>
+          </RowStyle>
+          <RowStyle>
             <Col span={12}>
-              <DatePicker
-                placeholder="Select Date of Birth"
-              />
+              <DatePicker placeholder="Select Date of Birth" />
             </Col>
-          </Row>
+          </RowStyle>
           <Form.Item wrapperCol={{ offset: 1, span: 16 }}>
-            <TwitterButton 
-            title="Next"
-            className="nextBtn"
-            handleBtnClick={handleBtnClick}
+            <TwitterButton
+              title="Next"
+              className="nextBtn"
+              handleBtnClick={handleBtnClick}
             />
-  
-          </Form.Item> 
+          </Form.Item>
         </Form>
       </ModalWrapper>
     </>

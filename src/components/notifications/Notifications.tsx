@@ -9,8 +9,7 @@ const Notifications = (props: propsType) => {
     <ModalWrapper
       showModal={showModal}
       setShowModal={setShowModal}
-      modalTitle="Notifications"
-    >
+      modalTitle="Notifications"     >
       <Section>
         <Notification />
         <Notification />

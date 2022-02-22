@@ -57,7 +57,25 @@ export const Button = styled.button`
        background-color:#878a8c ;
        border: none;
    }
-
+   &.nextBtn2{
+       padding: 10px 219px;
+       margin-top: 10px;
+       color: white;
+       background-color:black ;
+       border: none;
+       &:hover{
+           background-color: rgb(39 , 44 , 48);
+       }
+   }
+   &.forgetBtn{
+       padding: 10px 170px;
+       color: black;
+       background-color:white ;
+       border: 1px solid gray;
+       &:hover{
+           background-color: rgba(15 , 20 , 25 , 0.1);
+       }
+   }
    &.logout{
        background-color: rgb(15 , 20 , 25);
        color:#fff;

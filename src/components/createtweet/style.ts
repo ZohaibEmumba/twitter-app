@@ -7,8 +7,6 @@ export const Wrapper = styled.div`
 export const CreateSection = styled.section`
   padding-top: 70px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e6ecf0;
-  border-right: 1px solid #e6ecf0;
 `;
 export const Createfirst = styled.section`
   display: flex;

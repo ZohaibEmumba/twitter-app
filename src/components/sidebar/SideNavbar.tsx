@@ -36,10 +36,14 @@ import {
   IoNewspaperOutline,
   IoPersonOutline,
 } from "react-icons/io5";
+import Modal from "antd/lib/modal/Modal";
+import ModalWrapper from "../common/Modal/Modal";
+import CreateTweet from "../createtweet/CreateTweet";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [notificationModal, setShowNotificationModal] = useState<boolean>(false);
+  const [tweetModal, setTweetModal] = useState<boolean>(false)
   
 
   // const hide = () => {
@@ -50,19 +54,25 @@ const SideNavbar = () => {
   ) => {
     setvisible(visible);
   };
-  const handleNotificationClick = () => setShowModal(true);
-  const handleTweetBtn = () => setShowModal(true);
+  const handleNotificationClick = () => setShowNotificationModal(true);
+  const handleTweetBtn = () => setTweetModal(true);
 
   return (
     <>
-      {showModal && (
+      {notificationModal && (
         <Notifications
-          showModal={showModal}
-          setShowModal={setShowModal} 
+          showModal={notificationModal}
+          setShowModal={setShowNotificationModal}
           modalTitle="Notifications"
-          children={undefined}
-        />
+          children={undefined} />
       )}
+      {
+        tweetModal && (
+          <ModalWrapper showModal={tweetModal} setShowModal={setTweetModal} modalTitle={"Create Tweet"} width={700}>
+              <CreateTweet /> 
+          </ModalWrapper>
+        )
+      }
       <MainSection>
         <SideBar>
           <ul>

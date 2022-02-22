@@ -2,20 +2,19 @@ import { Modal } from "antd";
 import { propsType } from "../../../types";
 
 const ModalWrapper = (props: propsType) => {
-  const { showModal, setShowModal, children , modalTitle } = props;
-  // const [confirmLoading, setConfirmLoading] = useState<boolean>(false);
+  const { showModal, setShowModal, children, modalTitle, width } = props;
 
   return (
     <>
       <Modal
         title={modalTitle}
         visible={showModal}
-        // confirmLoading={confirmLoading}
         maskClosable={false}
         onCancel={() => setShowModal(false)}
-        footer
+        footer={null}
+        width={width}
       >
-       {children}
+        {children}
       </Modal>
     </>
   );

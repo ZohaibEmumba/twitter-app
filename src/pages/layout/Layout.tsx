@@ -30,6 +30,7 @@ const Layout = () => {
           <DsiplayTweet />
           <DsiplayTweet />
           <DsiplayTweet />
+
         {/* </Wrapper> */}
       </MiddleWrapper>
 

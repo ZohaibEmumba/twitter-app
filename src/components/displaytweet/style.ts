@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const WholeWrapper = styled.div`
   display: flex ;
   flex-direction: column ;  
-  border-right: 1px solid #e6ecf0;
   transition: .1s ease-in-out;
   &:hover{
     cursor: pointer;
