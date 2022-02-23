@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: fixed; 
-  top:9%; 
+  /*top:9%;
+  right :11% ;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
+  position: fixed; 
+  margin-top: 3%;
 
   @media (max-width: 992px) {
     display: none;

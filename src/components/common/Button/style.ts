@@ -8,7 +8,8 @@ export const Button = styled.button`
    cursor: pointer;
    border: none;
  
-   &.loginBtn {border-radius: 30px;
+   &.loginBtn {
+    border-radius: 30px;
     padding: 10px 20px;
     margin-bottom: 5px;
     background-color: rgb(29, 155, 240);
@@ -79,6 +80,16 @@ export const Button = styled.button`
        &:hover{
            background-color: rgb(39 , 44 , 48);
        }
+       
+        @media (max-width: 414px) {
+            padding:10px 155px !important;
+        }
+        @media (max-width: 375px) {
+            padding:10px 135px !important ;
+        }
+        @media (max-width: 280px) {
+            padding:10px 80px !important ;
+        }
    }
    &.forgetBtn{
        padding: 10px 170px;
@@ -88,6 +99,16 @@ export const Button = styled.button`
        &:hover{
            background-color: rgba(15 , 20 , 25 , 0.1);
        }
+       
+        @media (max-width: 414px) {
+            padding:10px 107px !important;
+        }
+        @media (max-width: 375px) {
+            padding:10px 90px !important ;
+        }
+        @media (max-width: 280px) {
+            padding:10px 80px !important ;
+        }
    }
    &.logout{
        background-color: rgb(15 , 20 , 25);

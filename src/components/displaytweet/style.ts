@@ -12,7 +12,8 @@ export const WholeWrapper = styled.div`
 export const PostSection = styled.div`
   padding: 20px;
   border-bottom: 1px solid #e6ecf0;
-  width: 94%;
+  border-top: 1px solid #e6ecf0;
+
 `;
 export const FirstPost = styled.div`
   display: flex;

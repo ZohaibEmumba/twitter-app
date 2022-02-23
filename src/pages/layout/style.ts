@@ -1,23 +1,30 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: auto;
-    height: 100vh;       
-`
-export const Wrapper = styled.div`
-     max-width: 666px; 
-`
+export const Section = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  /* margin: auto 10%; */
+  height: 100vh;
+  grid-template-areas: "nav  main aside";
+`;
+
 export const SideBarWrapper = styled.div`
+    grid-area: nav;
     display: flex;
-    justify-content: end; 
-`
+    justify-content: flex-end;
+`;
 export const MiddleWrapper = styled.div`
     border-right: 1px solid #e6ecf0;
-    max-width: 666px;
-`
+    grid-area: main;
+ 
+  /* max-width: 666px;  */
+`;
 export const EndWrapper = styled.div`
-    max-width: 400px; 
-    margin: 20px;
-`
+
+   max-width: 400px; 
+    /* margin: 20px;  */
+    grid-area: aside;
+    padding: 15px 15px;
+    
+  
+`;

@@ -98,7 +98,7 @@ const SideNavbar = () => {
             </li>
             <li>
               <Link to="/home" className="hover-menu navItem">
-                <FaRegBell className="icons" />
+                <FaRegBell className="icons" onClick={handleNotificationClick} />
                 <span>
                   <TwitterButton
                     title="Notifications"

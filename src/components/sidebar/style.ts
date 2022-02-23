@@ -28,7 +28,7 @@ export const SideBar = styled.div`
     } 
   }
   ul li {
-    width: 109%;
+    width: 100%;
   }
   ul li .navItem {
     display: flex;
@@ -41,13 +41,11 @@ export const SideBar = styled.div`
     &:hover {
       background: #f7f9f9;
       border-radius: 30px;
-      width: 80%;
     }
 
     @media (max-height: 800px) {
         padding: 10px 10px;
     } 
-
 
   }
   ul li .twitter-logo {
@@ -61,7 +59,7 @@ export const SideBar = styled.div`
     }
   }
   ul li span {
-    @media (max-width: 1100px) {
+    @media (max-width: 1300px) {
       display: none;
     }
   }
@@ -80,8 +78,8 @@ export const SideBar = styled.div`
 `;
 
 export const SidebarBtn = styled.div`
-  margin: 20px 20px;
-  @media (max-width: 992px) {
+  margin: 20px 40px;
+  @media (max-width: 1300px) {
     display: none;
   }
 `;
@@ -110,7 +108,7 @@ export const NameWrapper = styled.div`
   align-self: center;
   margin-left: 10px;
   margin-right: 10px;
-  @media (max-width: 992px) {
+  @media (max-width: 1300px) {
     display: none;
   }
 `;
@@ -129,7 +127,7 @@ export const IconWrapper = styled.div`
   align-self: center;
   cursor: pointer;
   color: grey;
-  @media (max-width: 992px) {
+  @media (max-width: 1300px) {
     display: none;
   }
 `;
