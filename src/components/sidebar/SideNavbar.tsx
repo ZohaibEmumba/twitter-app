@@ -36,19 +36,14 @@ import {
   IoNewspaperOutline,
   IoPersonOutline,
 } from "react-icons/io5";
-import Modal from "antd/lib/modal/Modal";
 import ModalWrapper from "../common/Modal/Modal";
 import CreateTweet from "../createtweet/CreateTweet";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
-  const [notificationModal, setShowNotificationModal] =
-    useState<boolean>(false);
+  const [notificationModal, setShowNotificationModal] = useState<boolean>(false);
   const [tweetModal, setTweetModal] = useState<boolean>(false);
 
-  // const hide = () => {
-  //   setvisible(false);
-  // };
   const handleVisibleChange = (
     visible: boolean | ((prevState: boolean) => boolean)
   ) => {
