@@ -9,7 +9,7 @@ import {
   MiddleWrapper,
   Section,
   SideBarWrapper,
-  Wrapper,
+  
 } from "./style";
 
 const Layout = () => {
@@ -20,7 +20,6 @@ const Layout = () => {
       </SideBarWrapper>
 
       <MiddleWrapper>
-        {/* <Wrapper> */}
           <FixedHome />
           <CreateTweet />
           <DsiplayTweet />
@@ -30,8 +29,6 @@ const Layout = () => {
           <DsiplayTweet />
           <DsiplayTweet />
           <DsiplayTweet />
-
-        {/* </Wrapper> */}
       </MiddleWrapper>
 
       <EndWrapper>

@@ -7,10 +7,6 @@ export const MainSection = styled.section`
   height: 100%;
   justify-content: space-between;
   border-right: 1px solid #e6ecf0;
-
-  @media (max-width: 1100px) {
-    width: 100px;
-  }
   
 `;
 export const SideBar = styled.div`

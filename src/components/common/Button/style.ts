@@ -56,9 +56,18 @@ export const Button = styled.button`
        color: white;
        background-color:#878a8c ;
        border: none;
-       @media (max-width: 400px) {
-      padding:10px 137px ;
-    }
+       @media (max-width: 412px) {
+            padding:10px 140px !important;
+        }
+        @media (max-width: 414px) {
+            padding:10px 140px !important;
+        }
+        @media (max-width: 366px) {
+            padding:10px 120px ;
+        }
+        @media (max-width: 280px) {
+            padding:10px 80px !important ;
+        }
        
    }
    &.nextBtn2{
