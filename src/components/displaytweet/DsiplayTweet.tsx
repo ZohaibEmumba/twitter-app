@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { FaRegCheckCircle, FaEllipsisH } from "react-icons/fa";
 import img from "../../assets/zohaib.jpg";
 import pakistanImg from "../../assets/Pakistan.jpg";
@@ -23,7 +24,7 @@ import {
 import PopoverContent from "./popover-content/PopoverContent";
 import { DEMO_TEXT, NAME, USERNAME } from "../../constants";
 
-const DsiplayTweet = () => {
+const DsiplayTweet:FC = () => {
   return (
     <WholeWrapper>
       <PostSection>

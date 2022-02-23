@@ -42,9 +42,9 @@ import CreateTweet from "../createtweet/CreateTweet";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
-  const [notificationModal, setShowNotificationModal] = useState<boolean>(false);
-  const [tweetModal, setTweetModal] = useState<boolean>(false)
-  
+  const [notificationModal, setShowNotificationModal] =
+    useState<boolean>(false);
+  const [tweetModal, setTweetModal] = useState<boolean>(false);
 
   // const hide = () => {
   //   setvisible(false);
@@ -64,15 +64,19 @@ const SideNavbar = () => {
           showModal={notificationModal}
           setShowModal={setShowNotificationModal}
           modalTitle="Notifications"
-          children={undefined} />
+          children={undefined}
+        />
       )}
-      {
-        tweetModal && (
-          <ModalWrapper showModal={tweetModal} setShowModal={setTweetModal} modalTitle={"Create Tweet"} width={700}>
-              <CreateTweet /> 
-          </ModalWrapper>
-        )
-      }
+      {tweetModal && (
+        <ModalWrapper
+          showModal={tweetModal}
+          setShowModal={setTweetModal}
+          modalTitle={"Create Tweet"}
+          width={700}
+        >
+          <CreateTweet />
+        </ModalWrapper>
+      )}
       <MainSection>
         <SideBar>
           <ul>
@@ -92,7 +96,7 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <VscSymbolNumeric className="icons" />
                 <span>Explore</span>
               </Link>
@@ -110,25 +114,25 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <FaRegEnvelope className="icons" />
                 <span>Messages</span>
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <FaRegBookmark className="icons" />
                 <span>Bookmarks</span>
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <IoNewspaperOutline className="icons" />
                 <span>Lists</span>
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover-menu navItem">
+              <Link to="/home" className="hover-menu navItem">
                 <IoPersonOutline className="icons" />
                 <span>Profile</span>
               </Link>
@@ -145,14 +149,14 @@ const SideNavbar = () => {
                 </Link>
               </Dropdown>
             </li>
-            <SidebarBtn>
-              <TwitterButton
-                title="Tweet"
-                className="tweetBtn"
-                handleClick={handleTweetBtn}
-              />
-            </SidebarBtn>
           </ul>
+          <SidebarBtn>
+            <TwitterButton
+              title="Tweet"
+              className="tweetBtn"
+              handleClick={handleTweetBtn}
+            />
+          </SidebarBtn>
         </SideBar>
 
         <Popover

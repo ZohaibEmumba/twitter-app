@@ -19,18 +19,21 @@ export const SideBar = styled.div`
     display: flex;
     flex-direction: column;
     align-items: end;
+    
+    @media (max-height: 667px) {
+        max-height: 333px;
+        overflow-y: scroll;
+    } 
+
+    @media (max-height: 500px) {
+        max-height: 200px;
+        overflow-y: scroll
+
+    } 
   }
   ul li {
-    width: 100%;
+    width: 109%;
   }
-  /* ul li:first-child {
-    padding: 12px;
-    @media (max-height: 800px) {
-    padding: 0px;
-
-} 
-  }*/
-
   ul li .navItem {
     display: flex;
     align-items: center;
@@ -49,10 +52,6 @@ export const SideBar = styled.div`
         padding: 10px 10px;
     } 
 
-    @media (max-height: 600px) {
-        overflow-y: scroll;
-        padding: 10px 10px;
-    } 
 
   }
   ul li .twitter-logo {

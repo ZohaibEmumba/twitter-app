@@ -1,10 +1,10 @@
+import { FC } from "react";
 import { Form, Input,} from "antd";
 import {  SIGN_IN } from "../../../constants";
 import TwitterButton from "../../common/Button/TwitterButton";
 import { RowStyle, Heading } from "./style";
 
-const LoginModal = () => {
-
+const LoginModal:FC = () => {
   const handleBtnClick = () => {
     alert("hello");
   };

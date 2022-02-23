@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { Img, NotificationWrapper } from "./style";
 import zohaib from "../../../assets/zohaib.jpg";
 import { TEXT, TIME } from "../../../constants";
 
-const Notification = () => {
+const Notification: FC = () => {
   return (
     <NotificationWrapper>
       <div>

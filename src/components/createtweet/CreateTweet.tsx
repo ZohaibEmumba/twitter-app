@@ -6,7 +6,7 @@ import TwitterButton from '../common/Button/TwitterButton'
 import { Tooltip } from 'antd'
 
 
-const CreateTweet: FC = () => {
+const CreateTweet:FC = () => {
   const [postText, setPostText] = useState<any>({})
   const [disable, setDisable] = useState<boolean>(true)
 

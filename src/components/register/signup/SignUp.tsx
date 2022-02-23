@@ -24,9 +24,11 @@ const SignUp = (props: propsType) => {
         modalTitle={"Sign Up"}
       >
         <RowStyle className="padding-row">
-          <Heading>
-            <strong>{CREATE_ACC}</strong>
-          </Heading>
+          <Col span={24}>
+            <Heading>
+              <strong>{CREATE_ACC}</strong>
+            </Heading>
+          </Col>
         </RowStyle>
         <Form
           name="basic"
@@ -46,27 +48,38 @@ const SignUp = (props: propsType) => {
           </Form.Item>
 
           <RowStyle className="padding-row">
-            <LinkButton onClick={handleClick}>
-              <span>Use {change ? "phone" : "email"} instead</span>
-            </LinkButton>
+            <Col span={24}>
+              <LinkButton onClick={handleClick}>
+                <span>Use {change ? "phone" : "email"} instead</span>
+              </LinkButton>
+            </Col>
           </RowStyle>
           <RowStyle>
-            <Heading>
-              <strong>{DOB}</strong>
-            </Heading>
-            <p>{SIGNUP_PARA}</p>
+            <Col span={24}>
+              <Heading>
+                <strong>{DOB}</strong>
+              </Heading>
+              <p>{SIGNUP_PARA}</p>
+            </Col>
           </RowStyle>
           <RowStyle>
-            <Col span={12}>
-              <DatePicker placeholder="Select Date of Birth" />
+            <Col span={24}>
+              <DatePicker
+                placeholder="Select Date of Birth"
+                style={{ width: "100%" }}
+              />
             </Col>
           </RowStyle>
           <Form.Item wrapperCol={{ offset: 1, span: 16 }}>
-            <TwitterButton
-              title="Next"
-              className="nextBtn"
-              handleBtnClick={handleBtnClick}
-            />
+            <RowStyle>
+              <Col span={24}>
+                <TwitterButton
+                  title="Next"
+                  className="nextBtn"
+                  handleBtnClick={handleBtnClick}
+                />
+              </Col>
+            </RowStyle>
           </Form.Item>
         </Form>
       </ModalWrapper>

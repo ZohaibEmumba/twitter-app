@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { Tooltip } from "antd";
 import { FaTwitter } from "react-icons/fa";
 import { PostHome } from "./style";
 
-const FixedHome = () => {
+const FixedHome:FC = () => {
   return (
     <PostHome>
       <div>Home</div>
