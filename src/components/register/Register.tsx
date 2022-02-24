@@ -16,11 +16,18 @@ import img from "../../assets/lohp.png";
 import logo from "../../assets/twitter-logo.png";
 import whiteTwitter from "../../assets/icons8-twitter-250.png";
 import SignUp from "./signup/SignUp";
-import { ALREADY_ACC, COOKIE, HAPEENING_NOW, JOIN_TWITTER_TODAY, PRIVACY, TERMS } from "../../constants";
+import {
+  ALREADY_ACC,
+  COOKIE,
+  HAPEENING_NOW,
+  JOIN_TWITTER_TODAY,
+  PRIVACY,
+  TERMS,
+} from "../../constants";
 import ModalWrapper from "../common/Modal/Modal";
 import LoginModal from "./login/LoginModal";
 
-const Login:FC = () => {
+const Login: FC = () => {
   const [showSignUpModal, setShowSignUpModal] = useState<boolean>(false);
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
 
@@ -47,7 +54,7 @@ const Login:FC = () => {
 
   const handleSignUpClick = () => setShowSignUpModal(true);
   const handleLoginClick = () => setShowLoginModal(true);
-  
+
   return (
     <>
       {showSignUpModal && (
@@ -59,8 +66,12 @@ const Login:FC = () => {
         />
       )}
       {showLoginModal && (
-        <ModalWrapper showModal={showLoginModal} setShowModal={setShowLoginModal}  modalTitle={"Login"}>
-           <LoginModal  />
+        <ModalWrapper
+          showModal={showLoginModal}
+          setShowModal={setShowLoginModal}
+          modalTitle={"Login"}
+        >
+          <LoginModal />
         </ModalWrapper>
       )}
       <Wrapper>
@@ -99,8 +110,8 @@ const Login:FC = () => {
                   <p>
                     By signing up, you are agree to the{" "}
                     <Link to="/termsofService">{TERMS} </Link>
-                    and <Link to="/privacypolicy">{PRIVACY}</Link> ,
-                    including <Link to="/cookieuse">{COOKIE}</Link> .
+                    and <Link to="/privacypolicy">{PRIVACY}</Link> , including{" "}
+                    <Link to="/cookieuse">{COOKIE}</Link> .
                   </p>
                 </PrivacyText>
               </Section>

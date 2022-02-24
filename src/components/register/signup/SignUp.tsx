@@ -70,7 +70,7 @@ const SignUp = (props: propsType) => {
               />
             </Col>
           </RowStyle>
-          <Form.Item wrapperCol={{ offset: 1, span: 16 }}>
+          <Form.Item>
             <RowStyle>
               <Col span={24}>
                 <TwitterButton

@@ -15,6 +15,11 @@ const Notifications = (props: propsType) => {
         <Notification />
         <Notification />
         <Notification />
+        <Notification />
+        <Notification />
+        <Notification />
+        <Notification />
+        <Notification />
       </Section>
     </ModalWrapper>
   );

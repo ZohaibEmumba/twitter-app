@@ -32,6 +32,7 @@ import Notifications from "../notifications/Notifications";
 import { NAME, USERNAME } from "../../constants";
 import {
   IoAddCircleOutline,
+  IoBrushOutline,
   IoHomeOutline,
   IoNewspaperOutline,
   IoPersonOutline,
@@ -144,6 +145,9 @@ const SideNavbar = () => {
                 </Link>
               </Dropdown>
             </li>
+            <li className="tweet-circle-btn">
+                <IoBrushOutline onClick={handleTweetBtn} />
+             </li>
           </ul>
           <SidebarBtn>
             <TwitterButton
@@ -153,6 +157,7 @@ const SideNavbar = () => {
             />
           </SidebarBtn>
         </SideBar>
+        
 
         <Popover
           trigger="click"

@@ -20,7 +20,7 @@ const Layout = () => {
       </SideBarWrapper>
 
       <MiddleWrapper>
-         <FixedHome />
+          <FixedHome />
           <CreateTweet />
           <DsiplayTweet />
           <DsiplayTweet />
@@ -28,6 +28,8 @@ const Layout = () => {
           <DsiplayTweet />
           <DsiplayTweet />
           <DsiplayTweet />
+          <DsiplayTweet /> 
+          <DsiplayTweet /> 
           <DsiplayTweet /> 
       </MiddleWrapper>
 

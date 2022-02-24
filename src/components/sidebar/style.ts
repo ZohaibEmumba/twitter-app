@@ -29,7 +29,23 @@ export const SideBar = styled.div`
   }
   ul li {
     width: 100%;
+    &.tweet-circle-btn{
+      display: none;
+      width: 75%;
+      margin-right: 15px;
+    @media (max-width : 1100px){
+      display: inline-block;
+      padding: 10px 10px;
+      background-color: #1da1f2 ;
+      border-radius: 50%;
+      text-align: center;
+      color: white;
+    }
   }
+
+  }
+
+  
   ul li .navItem {
     display: flex;
     align-items: center;
