@@ -138,6 +138,7 @@ const SideNavbar = () => {
                 overlay={menu}
                 trigger={["click"]}
                 placement="topCenter"
+                overlayStyle={{position:'fixed'}}
               >
                 <Link to="/home" className="hover-menu navItem">
                   <IoAddCircleOutline className="icons" />
@@ -158,14 +159,14 @@ const SideNavbar = () => {
           </SidebarBtn>
         </SideBar>
         
-
         <Popover
           trigger="click"
           content={<PorpoverContent />}
           title={<PopOverButton />}
           visible={visible}
           onVisibleChange={handleVisibleChange}
-        >
+          overlayStyle={{position:'fixed'}}
+      >
           <MainWrapper>
             <ProfileButton>
               <div>
