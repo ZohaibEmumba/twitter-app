@@ -19,6 +19,8 @@ export const FirstPost = styled.div`
   display: flex;
   align-items: center;
   gap:10px;
+
+
   .post-wrapper {
     display: flex ; 
     align-self: baseline ;
@@ -32,11 +34,9 @@ export const FirstPost = styled.div`
       transition: 0.3s ease;
       &:hover{
         color: rgb(29 , 155 , 240);
-
       }
     }
   }
-
 `;
 export const PostImg = styled.div`
   width: 50px;
@@ -54,8 +54,14 @@ export const PostName = styled.div`
   font-size: 18px;
   font-weight:500;
   .verify {
-    margin-left: 3px;
+    margin: -3px 5px;
     color: #1da1f2;
+  }
+  .verify_filled{
+    margin: -3px 5px;
+    background-color: #1da1f2 ;
+    border-radius: 50%;
+    color: white;
   }
   span{
     &:hover{
@@ -64,7 +70,7 @@ export const PostName = styled.div`
   }
 `;
 export const PostUserName = styled.div`
-  margin-left: 6px;
+  margin: 3px 0px;
   color: grey;
   font-weight: 300;
 
@@ -91,7 +97,7 @@ export const PostImgDetails = styled.div`
 `;
 export const PostReactions = styled.div`
   display: flex;
-  margin: 8px 0;
+  margin: 8px 25px;
   justify-content: space-between;
   align-items: center;
   color: silver;

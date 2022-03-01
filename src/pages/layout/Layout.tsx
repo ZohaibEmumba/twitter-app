@@ -1,5 +1,5 @@
 import CreateTweet from "../../components/createtweet/CreateTweet";
-import DsiplayTweet from "../../components/displaytweet/DsiplayTweet";
+import DisplayTweet from "../../components/displaytweet/DisplayTweet";
 import FixedHome from "../../components/fixedhome/FixedHome";
 import SearchBar from "../../components/search/SearchBar";
 import SideNavbar from "../../components/sidebar/SideNavbar";
@@ -12,6 +12,7 @@ import {
   
 } from "./style";
 
+
 const Layout = () => {
   return (
     <Section>
@@ -22,15 +23,7 @@ const Layout = () => {
       <MiddleWrapper>
           <FixedHome />
           <CreateTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet />
-          <DsiplayTweet /> 
-          <DsiplayTweet /> 
-          <DsiplayTweet /> 
+          <DisplayTweet />
       </MiddleWrapper>
 
       <EndWrapper>

@@ -20,7 +20,7 @@ export const MiddleWrapper = styled.div`
   grid-area: main;
 `;
 export const EndWrapper = styled.div`
-  max-width: 400px;
+  max-width: 434px;
   grid-area: aside;
   padding: 15px 15px;
 `;

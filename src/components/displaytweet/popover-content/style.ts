@@ -22,11 +22,6 @@ export const Wrapper = styled.section`
         display: flex;
         flex-direction:row;
         justify-content: space-between;
-        
-        span{
-            font-size:15px;
-            font-weight:600;
-        }
     }
     .logo-img{
         width: 60px;

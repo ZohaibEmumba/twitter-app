@@ -112,6 +112,17 @@ export const Button = styled.button`
     color: #fff;
     width: 100%;
   }
+  &.followingBtn{
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid gray;
+    color: black;
+    width: 100%;
+
+    &:hover{
+      background-color: rgba(23, 155, 240, 0.1);
+    }
+  }
   &.none {
     border: none;
     background-color: transparent;

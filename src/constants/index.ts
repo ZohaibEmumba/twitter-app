@@ -1,10 +1,6 @@
 export const SHOW_MODAL = "SHOW_MODAL"
 export const NAME ="Muhammad Zohaib"
 export const USERNAME = "@zohaibkhan"
-export const DEMO_TEXT ='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam'
-export const DESP = "PTI | Professor UI | PhD in Leadership"
-export const FOLLOWING = "278K"
-export const FOLLOWERE = "27K"
 export const TEXT = "This Person reacted to your post"
 export const TIME = "About an hour ago"
 export const LOCATION = "Location"

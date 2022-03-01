@@ -1,30 +1,42 @@
-import { FC } from "react";
-import { Wrapper } from "./style";
-import zohaib from "../../../assets/zohaib.jpg";
 import TwitterButton from "../../common/Button/TwitterButton";
-import { DESP, FOLLOWERE, FOLLOWING, NAME, USERNAME } from "../../../constants";
+import { Wrapper } from "./style";
+import { UserOutlined } from "@ant-design/icons";
+import { Avatar } from "antd";
+type PropTypes = {
+  post: any;
+};
 
-const PopoverContent: FC = () => {
+const PopoverContent = (props: PropTypes) => {
+  const { post } = props;
   return (
     <Wrapper>
       <div>
         <div>
-          <img src={zohaib} alt="logo" className="logo-img" />
+          {post?.profile_img ? (
+            <img src={post?.profile_img} alt="logo" className="logo-img" />
+          ) : (
+            <Avatar size={50} icon={<UserOutlined />} />
+          )}
         </div>
         <div>
-          <TwitterButton title="Follow" className="followBtn" />
+          <TwitterButton 
+          title="Following" 
+          className="followingBtn" 
+          />
         </div>
       </div>
       <div>
-        <span>{NAME}</span>
-        <span>{USERNAME}</span>
+        <span>{post?.name}</span>
+        <span>{post?.username}</span>
       </div>
-      <div>
-        <span>{DESP}</span>
-      </div>
+      <div>{post?.work_desp ? <span>{post?.work_desp}</span> : null}</div>
       <div className="follower-sect">
-        <span>{FOLLOWING}</span> Following
-        <span>{FOLLOWERE}</span> Followers
+        <span>
+          <strong>{post?.following}</strong> {""} Following
+        </span>
+        <span>
+          <strong>{post?.followers}</strong> Followers
+        </span>
       </div>
     </Wrapper>
   );
