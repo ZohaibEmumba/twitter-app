@@ -22,14 +22,14 @@ import {
   TextSpan1,
 } from "./style";
 import profileImg from "../../assets/zohaib.jpg";
-import { Link } from "react-router-dom";
+import { Link , useLocation } from "react-router-dom";
 import { Dropdown, Popover } from "antd";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
-import { NAME, USERNAME } from "../../constants";
+import { NAME, SHOWTREND, USERNAME } from "../../constants";
 import {
   IoAddCircleOutline,
   IoBrushOutline,
@@ -39,11 +39,17 @@ import {
 } from "react-icons/io5";
 import ModalWrapper from "../common/Modal/Modal";
 import CreateTweet from "../createtweet/CreateTweet";
+import { TwitterContext } from "../../context/TwitterContext";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
-  const [notificationModal, setShowNotificationModal] = useState<boolean>(false);
+  const [notificationModal, setShowNotificationModal] =
+  useState<boolean>(false);
   const [tweetModal, setTweetModal] = useState<boolean>(false);
+  const { dispatch } = useContext(TwitterContext);
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
 
   const handleVisibleChange = (
     visible: boolean | ((prevState: boolean) => boolean)
@@ -52,6 +58,15 @@ const SideNavbar = () => {
   };
   const handleNotificationClick = () => setShowNotificationModal(true);
   const handleTweetBtn = () => setTweetModal(true);
+  const handleHomeClick = () => {
+    dispatch({
+      type: SHOWTREND,
+      payload: {
+        trending: false ,
+        name : ""
+      }
+    });
+  };
 
   return (
     <>
@@ -82,7 +97,11 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu active navItem">
+              <Link
+                to="/home"
+                className={splitLocation[1] === "home" ? "hover-menu navItem active" : "hover-menu navItem" }
+                onClick={handleHomeClick}
+              >
                 {true ? (
                   <FaHome className="icons" />
                 ) : (
@@ -92,14 +111,17 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/home" className="hover-menu navItem">
+              <Link to="/trending" className={splitLocation[1] === "trending" ? "hover-menu navItem active" : "hover-menu navItem" }>
                 <VscSymbolNumeric className="icons" />
                 <span>Explore</span>
               </Link>
             </li>
             <li>
               <Link to="/home" className="hover-menu navItem">
-                <FaRegBell className="icons" onClick={handleNotificationClick} />
+                <FaRegBell
+                  className="icons"
+                  onClick={handleNotificationClick}
+                />
                 <span>
                   <TwitterButton
                     title="Notifications"
@@ -138,7 +160,7 @@ const SideNavbar = () => {
                 overlay={menu}
                 trigger={["click"]}
                 placement="topCenter"
-                overlayStyle={{position:'fixed'}}
+                overlayStyle={{ position: "fixed" }}
               >
                 <Link to="/home" className="hover-menu navItem">
                   <IoAddCircleOutline className="icons" />
@@ -147,8 +169,8 @@ const SideNavbar = () => {
               </Dropdown>
             </li>
             <li className="tweet-circle-btn">
-                <IoBrushOutline onClick={handleTweetBtn} />
-             </li>
+              <IoBrushOutline onClick={handleTweetBtn} />
+            </li>
           </ul>
           <SidebarBtn>
             <TwitterButton
@@ -158,15 +180,15 @@ const SideNavbar = () => {
             />
           </SidebarBtn>
         </SideBar>
-        
+
         <Popover
           trigger="click"
           content={<PorpoverContent />}
           title={<PopOverButton />}
           visible={visible}
           onVisibleChange={handleVisibleChange}
-          overlayStyle={{position:'fixed'}}
-      >
+          overlayStyle={{ position: "fixed" }}
+        >
           <MainWrapper>
             <ProfileButton>
               <div>

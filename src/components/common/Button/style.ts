@@ -114,10 +114,12 @@ export const Button = styled.button`
   }
   &.followingBtn{
     padding: 10px 20px;
+    border-radius: 50px;
     background-color: white;
     border: 1px solid gray;
     color: black;
     width: 100%;
+    font-weight: 600;
 
     &:hover{
       background-color: rgba(23, 155, 240, 0.1);

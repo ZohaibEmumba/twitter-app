@@ -14,6 +14,7 @@ const App:FC = () => {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Layout />} />
+            <Route path="/trending/" element={<Layout />} /> 
           </Routes>
         </BrowserRouter>
       </div>

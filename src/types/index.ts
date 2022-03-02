@@ -1,12 +1,13 @@
 export type Action =
-  | {
-    type: 'SHOW_MODAL', payload: {
-      isvisible: boolean ,
-    }
+  |{
+    type: 'SHOWTREND', payload: {
+      trending: boolean ,
+      name : string
+    } ,
+    
   }
   
 export type Dispatch = React.Dispatch<Action>;
-
 
 export type propsType = {
   showModal: boolean;

@@ -1,4 +1,4 @@
-export const SHOW_MODAL = "SHOW_MODAL"
+export const SHOWTREND = "SHOWTREND"
 export const NAME ="Muhammad Zohaib"
 export const USERNAME = "@zohaibkhan"
 export const TEXT = "This Person reacted to your post"

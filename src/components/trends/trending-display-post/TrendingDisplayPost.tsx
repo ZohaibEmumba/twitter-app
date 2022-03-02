@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { FaRegCheckCircle, FaEllipsisH } from "react-icons/fa";
 import {
   FirstPost,
+  HashTag,
   PostDetails,
   PostImg,
   PostImgDetails,
@@ -12,22 +13,26 @@ import {
   WholeWrapper,
 } from "./style";
 import { Dropdown, Popover } from "antd";
-import { menu } from "./dropdownlist/MenuList";
+import { menu } from "../../displaytweet/dropdownlist/MenuList";
 import {
   IoChatbubbleOutline,
   IoCloudUploadOutline,
   IoHeartOutline,
   IoRepeatSharp,
 } from "react-icons/io5";
-import PopoverContent from "./popover-content/PopoverContent";
-import { posts } from "../../constants/PostObj";
+import PopoverContent from "../../displaytweet/popover-content/PopoverContent";
+import { TrendingPosts } from "../../../constants/PostObj";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import { TwitterContext } from "../../../context/TwitterContext";
 
-const DsiplayTweet: FC = (): any => {
-  return (posts.map( (post , index) => (
-    <div key={index}>
-      {post?.isFollowing ? (
+const TrendingDisplayTweet: FC = (): any => {
+  const { state } = useContext(TwitterContext);
+  const { name } = state;
+
+  return TrendingPosts.map((post, index) =>
+    post?.trend_keyword === name ? (
+      <div key={index}>
         <WholeWrapper>
           <PostSection>
             <FirstPost>
@@ -80,6 +85,7 @@ const DsiplayTweet: FC = (): any => {
             </FirstPost>
             <PostDetails>
               <PostImgDetails>{post?.post_despcription}</PostImgDetails>
+              <HashTag>{post?.trending_desp}</HashTag>
               {post?.post_img ? (
                 <PostImgDetails>
                   <img src={post?.post_img} alt="post" />
@@ -107,9 +113,9 @@ const DsiplayTweet: FC = (): any => {
             </PostDetails>
           </PostSection>
         </WholeWrapper>
-      ) : null}
-    </div>
-  )))
+      </div>
+    ) : null
+  );
 };
 
-export default DsiplayTweet;
+export default TrendingDisplayTweet;

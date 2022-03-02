@@ -1,9 +1,10 @@
 import { createContext } from "react";
-import { SHOW_MODAL } from "../constants";
+import { SHOWTREND } from "../constants";
 import { Action, Dispatch } from "../types";
 
 export const initialState: any = {
-    isvisible: false,
+    trending: false,
+    name: ""
 };
 
 export const TwitterContext = createContext<{
@@ -15,11 +16,16 @@ export const TwitterContext = createContext<{
 });
 
 export const Reducer = (state = initialState, action: Action): any => {
-    const { type , payload } = action;
+    const { type, payload } = action;
     switch (type) {
-        case SHOW_MODAL:
-            return { ...state, isvisible: payload };
+        case SHOWTREND:
+            return {
+                ...state,
+                trending: payload.trending,
+                name: payload.name
+            };
         default:
             return state;
     }
+
 };

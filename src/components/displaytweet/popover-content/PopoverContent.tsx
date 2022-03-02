@@ -19,10 +19,7 @@ const PopoverContent = (props: PropTypes) => {
           )}
         </div>
         <div>
-          <TwitterButton 
-          title="Following" 
-          className="followingBtn" 
-          />
+          <TwitterButton title="Following" className="followingBtn" />
         </div>
       </div>
       <div>
