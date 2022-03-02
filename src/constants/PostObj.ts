@@ -20,7 +20,7 @@ export const posts = [
     followers: '200K',
     following: '300K',
     work_desp: 'PTI | Professor UI | PhD in Leadership',
-    isFollowing: true,
+    isFollowing: false,
 
   },
   {
@@ -363,7 +363,7 @@ export const TrendingPosts = [
     followers: '200K',
     following: '300K',
     work_desp: 'PTI | Professor UI | PhD in Leadership',
-    isFollowing: true,
+    isFollowing: false,
     trend_keyword: 'ISPR'
 
   },

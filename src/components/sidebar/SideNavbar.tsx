@@ -85,7 +85,7 @@ const SideNavbar = () => {
           modalTitle={"Create Tweet"}
           width={700}
         >
-          <CreateTweet />
+          <CreateTweet className="no-padding" />
         </ModalWrapper>
       )}
       <MainSection>

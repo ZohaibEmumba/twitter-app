@@ -5,8 +5,15 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `
 export const CreateSection = styled.section`
-  padding-top: 70px;
-  padding-bottom: 20px;
+  &.show-padding {
+    padding-top: 70px;
+    padding-bottom: 20px;
+
+  }
+  &.no-padding{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 `;
 export const Createfirst = styled.section`
   display: flex;

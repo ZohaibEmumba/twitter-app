@@ -2,12 +2,13 @@ import TwitterButton from "../../common/Button/TwitterButton";
 import { Wrapper } from "./style";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar } from "antd";
-type PropTypes = {
-  post: any;
-};
 
-const PopoverContent = (props: PropTypes) => {
+
+const PopoverContent = (props: any) => {
   const { post } = props;
+  const handleFollowClick = () => {
+
+  }
   return (
     <Wrapper>
       <div>
@@ -19,7 +20,11 @@ const PopoverContent = (props: PropTypes) => {
           )}
         </div>
         <div>
-          <TwitterButton title="Following" className="followingBtn" />
+          <TwitterButton 
+          title={ post?.isFollowing ? "Following" : "Follow" } 
+          className={ post?.isFollowing ? "followingBtn" : "followBtn"} 
+          handleClick={handleFollowClick}
+          />
         </div>
       </div>
       <div>

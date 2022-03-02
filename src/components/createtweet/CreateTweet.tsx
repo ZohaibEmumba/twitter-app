@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import {
   FaRegImage,
   FaRegListAlt,
@@ -20,7 +20,8 @@ import img from "../../assets/zohaib.jpg";
 import TwitterButton from "../common/Button/TwitterButton";
 import { Tooltip } from "antd";
 
-const CreateTweet: FC = () => {
+const CreateTweet = (props: any) => {
+  const { className } = props;
   const [postText, setPostText] = useState<any>({});
   const [disable, setDisable] = useState<boolean>(true);
 
@@ -36,8 +37,8 @@ const CreateTweet: FC = () => {
     }
   };
   return (
-    <Wrapper>
-      <CreateSection>
+    <Wrapper >
+      <CreateSection className={className ? className : "show-padding"}>
         <Createfirst>
           <Createimg>
             <img src={img} alt="profile " />

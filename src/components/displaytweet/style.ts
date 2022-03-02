@@ -97,7 +97,7 @@ export const PostImgDetails = styled.div`
 `;
 export const PostReactions = styled.div`
   display: flex;
-  margin: 8px 25px;
+  margin: 8px 0px;
   justify-content: space-between;
   align-items: center;
   color: silver;
