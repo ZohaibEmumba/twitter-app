@@ -1,8 +1,8 @@
 import user_img from '../assets/zohaib.jpg'
 import post_img from '../assets/Pakistan.jpg'
 
-const today = new Date();
-const time = today.getHours() + "h";
+const timestamp  = new Date();
+const time = timestamp.getHours() + "h";
 
 export const posts = [
   {
@@ -350,7 +350,7 @@ export const TrendingPosts = [
   {
     id: 1,
     name: 'Muhammad Zohaib',
-    username: '@zohaibkhan',
+    username: '@zohaibkhan',  
     profile_img: user_img,
     verified: false,
     post_time: time,
