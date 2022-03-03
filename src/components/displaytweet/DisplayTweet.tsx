@@ -25,8 +25,9 @@ import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 const DsiplayTweet: FC = (): any => {
-  const [heartActive, setHeartActive] = useState<boolean>(false)
-  return (posts.map( (post , index) => (
+  const [heartActive, setHeartActive] = useState<boolean>(false);
+
+  return posts.map((post, index) => (
     <div key={index}>
       {post?.isFollowing ? (
         <WholeWrapper>
@@ -97,9 +98,14 @@ const DsiplayTweet: FC = (): any => {
                   <IoRepeatSharp />
                   <span>{post?.retweet}</span>
                 </div>
-                <div onClick={() => setHeartActive(!heartActive) } className={heartActive ? "active-heart-icon" : "heart-icon"}>
+                <div
+                  onClick={() => setHeartActive(!heartActive)}
+                  className={heartActive ? "active-heart-icon" : "heart-icon"}
+                >
                   <IoHeartOutline />
-                  <span>{heartActive ? post?.post_hearts : post?.post_hearts - 1 }</span>
+                  <span>
+                    {heartActive ? post?.post_hearts : post?.post_hearts - 1}
+                  </span>
                 </div>
                 <div className="leaf-icon">
                   <IoCloudUploadOutline />
@@ -108,9 +114,9 @@ const DsiplayTweet: FC = (): any => {
             </PostDetails>
           </PostSection>
         </WholeWrapper>
-      ) : null}
+      ) : null}{" "}
     </div>
-  )))
+  ));
 };
 
 export default DsiplayTweet;
