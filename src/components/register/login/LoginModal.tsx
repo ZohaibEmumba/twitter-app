@@ -3,8 +3,6 @@ import { Form, Input, Button } from "antd";
 import { TwitterContext } from "../../../context/TwitterContext";
 import { useNavigate } from "react-router-dom";
 
-
-
 const LoginModal = () => {
   const { state } = useContext(TwitterContext)
   const { username } = state
@@ -12,7 +10,6 @@ const LoginModal = () => {
     username: ''
   })
   const Navigate = useNavigate();
-
 
   const onFinish = () => {
     console.log(userData);
