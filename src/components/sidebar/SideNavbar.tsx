@@ -22,7 +22,7 @@ import {
   TextSpan1,
 } from "./style";
 import profileImg from "../../assets/zohaib.jpg";
-import { Link , useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dropdown, Popover } from "antd";
 import { useContext, useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
@@ -44,7 +44,7 @@ import { TwitterContext } from "../../context/TwitterContext";
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
   const [notificationModal, setShowNotificationModal] =
-  useState<boolean>(false);
+    useState<boolean>(false);
   const [tweetModal, setTweetModal] = useState<boolean>(false);
   const { dispatch } = useContext(TwitterContext);
   const location = useLocation();
@@ -62,9 +62,9 @@ const SideNavbar = () => {
     dispatch({
       type: SHOWTREND,
       payload: {
-        trending: false ,
-        name : ""
-      }
+        trending: false,
+        name: "",
+      },
     });
   };
 
@@ -92,14 +92,22 @@ const SideNavbar = () => {
         <SideBar>
           <ul>
             <li>
-              <Link to="/home" className="twitter-logo">
+              <Link
+                to="/home"
+                className="twitter-logo"
+                onClick={handleHomeClick}
+              >
                 <FaTwitter className="icons logo" />
               </Link>
             </li>
             <li>
               <Link
                 to="/home"
-                className={splitLocation[1] === "home" ? "hover-menu navItem active" : "hover-menu navItem" }
+                className={
+                  splitLocation[1] === "home"
+                    ? "hover-menu navItem active"
+                    : "hover-menu navItem"
+                }
                 onClick={handleHomeClick}
               >
                 {true ? (
@@ -111,7 +119,14 @@ const SideNavbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/trending" className={splitLocation[1] === "trending" ? "hover-menu navItem active" : "hover-menu navItem" }>
+              <Link
+                to="/trending"
+                className={
+                  splitLocation[1] === "trending"
+                    ? "hover-menu navItem active"
+                    : "hover-menu navItem"
+                }
+              >
                 <VscSymbolNumeric className="icons" />
                 <span>Explore</span>
               </Link>

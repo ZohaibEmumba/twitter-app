@@ -6,8 +6,8 @@ import { Avatar } from "antd";
 
 const PopoverContent = (props: any) => {
   const { post } = props;
-  const handleFollowClick = () => {
-
+  const handleFollowClick = (val: boolean ) => {
+   console.log(val)
   }
   return (
     <Wrapper>
@@ -23,7 +23,7 @@ const PopoverContent = (props: any) => {
           <TwitterButton 
           title={ post?.isFollowing ? "Following" : "Follow" } 
           className={ post?.isFollowing ? "followingBtn" : "followBtn"} 
-          handleClick={handleFollowClick}
+          handleClick={()=> handleFollowClick(post?.isFollowing)}
           />
         </div>
       </div>

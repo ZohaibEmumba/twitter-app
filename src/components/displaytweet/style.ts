@@ -129,6 +129,9 @@ export const PostReactions = styled.div`
         color: rgb(249 , 24 , 148);
       }
     }
+    &.active-heart-icon{
+      color: rgb(249 , 24 , 148);
+    }
     &.leaf-icon{
       font-size:15px;
       transition: 0.3s ease;

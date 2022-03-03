@@ -37,7 +37,7 @@ const CreateTweet = (props: any) => {
     }
   };
   return (
-    <Wrapper >
+    <Wrapper>
       <CreateSection className={className ? className : "show-padding"}>
         <Createfirst>
           <Createimg>

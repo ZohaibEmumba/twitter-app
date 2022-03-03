@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { FaRegCheckCircle, FaEllipsisH } from "react-icons/fa";
 import {
   FirstPost,
@@ -25,6 +25,7 @@ import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 const DsiplayTweet: FC = (): any => {
+  const [heartActive, setHeartActive] = useState<boolean>(false)
   return (posts.map( (post , index) => (
     <div key={index}>
       {post?.isFollowing ? (
@@ -96,9 +97,9 @@ const DsiplayTweet: FC = (): any => {
                   <IoRepeatSharp />
                   <span>{post?.retweet}</span>
                 </div>
-                <div className="heart-icon">
+                <div onClick={() => setHeartActive(!heartActive) } className={heartActive ? "active-heart-icon" : "heart-icon"}>
                   <IoHeartOutline />
-                  <span>{post?.post_hearts}</span>
+                  <span>{heartActive ? post?.post_hearts : post?.post_hearts - 1 }</span>
                 </div>
                 <div className="leaf-icon">
                   <IoCloudUploadOutline />
