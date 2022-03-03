@@ -24,28 +24,10 @@ import TrendModal from "./trend-modal/TrendModal";
 
 const Trends: FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const {dispatch} = useContext(TwitterContext);
+  const {state , dispatch} = useContext(TwitterContext);
+  const {trendingPostData} = state;
   const Navigate = useNavigate();
-  const [trendingPost] = useState([
-    {
-      id: 1,
-      country: "Trending in Pakistan",
-      keyword: "ISPR",
-      totalKeywords: "2000k",
-    },
-    {
-      id: 2,
-      country: "Trending in Pakistan",
-      keyword: "IMRANKHAN",
-      totalKeywords: "6000k",
-    },
-    {
-      id: 3,
-      country: "Trending in Pakistan",
-      keyword: "YoutubeinPakistan",
-      totalKeywords: "2560k",
-    },
-  ]);
+  
 
   const handleSettingClick = () => {
     setShowModal(true);
@@ -85,7 +67,7 @@ const Trends: FC = () => {
                 />
               </div>
             </KeywordHeading>
-            {trendingPost.map((trend) => (
+            {trendingPostData.map((trend :any) => (
               <TrendWrapper key={trend.id} onClick={() => handleTrendClick(trend?.keyword)}>
                 <div>
                   <CountryHeading>{trend.country}</CountryHeading>
