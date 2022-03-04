@@ -13,6 +13,7 @@ const ModalWrapper = (props: propsType) => {
         onCancel={() => setShowModal(false)}
         footer={null}
         width={width}
+
       >
         {children}
       </Modal>

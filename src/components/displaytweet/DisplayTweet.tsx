@@ -32,8 +32,7 @@ const DsiplayTweet: FC = (): any => {
   return users.map((post, index) => (
     <div key={index}>
       {post?.isFollowing ? (
-        console.log(users)
-        // <WholeWrapper>
+        <h1>Hello there</h1>        // <WholeWrapper>
         //   <PostSection>
         //     <FirstPost>
         //       <div>

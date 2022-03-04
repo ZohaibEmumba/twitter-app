@@ -1,11 +1,13 @@
 import { createContext } from "react";
 import { SHOWTREND } from "../constants";
+import { users } from "../constants/PostObj";
 import { Action, Dispatch } from "../types";
 
 export const initialState: any = {
-    username: "@zohaib007",
+    // username: "@zohaib007",
     trending: false,
     name: "",
+    allUsers: users,
     homePosts: [],
     trendingPostData: [{
         id: 1,

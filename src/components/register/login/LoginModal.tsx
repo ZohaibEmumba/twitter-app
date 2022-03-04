@@ -5,20 +5,22 @@ import { useNavigate } from "react-router-dom";
 
 const LoginModal = () => {
   const { state } = useContext(TwitterContext)
-  const { username } = state
+  const { allUsers } = state
   const [userData, setUserData] = useState<any>({
     username: ''
   })
   const Navigate = useNavigate();
 
   const onFinish = () => {
-    console.log(userData);
-    if(username === userData.username){
-      Navigate('/home')
-    }
-    else{
-      alert('You enter wrong username')
-    }
+    console.log(allUsers);
+    allUsers.map((user: any) => {
+      if (user?.username === userData.username) {
+        Navigate('/home')
+      }
+      else {
+        alert('You enter wrong username')
+      }
+    })
   };
 
   const onFinishFailed = () => {
@@ -26,31 +28,31 @@ const LoginModal = () => {
   };
 
   return (
-      <Form
-        name="Login Form"
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
+    <Form
+      name="Login Form"
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+      autoComplete="off"
+    >
+      <Form.Item
+        label="Username"
+        name="username"
+        rules={[{ required: true, message: 'Please input your username!' }]}
       >
-        <Form.Item
-          label="Username"
-          name="username"
-          rules={[{ required: true, message: 'Please input your username!' }]}
-        >
-          <Input
-            onChange={(e: any) => setUserData({
-              ...userData,
-              username: e.target.value
-            })
-            }
-          />
-        </Form.Item>
-        <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
-          <Button type="primary" htmlType="submit" >
-            Login
-          </Button>
-        </Form.Item>
-      </Form>
+        <Input
+          onChange={(e: any) => setUserData({
+            ...userData,
+            username: e.target.value
+          })
+          }
+        />
+      </Form.Item>
+      <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
+        <Button type="primary" htmlType="submit" >
+          Login
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

@@ -117,7 +117,7 @@ export const users = [
   , {
     id: 6,
     name: 'Muhammad Badar',
-    username: '@ismailkhan',
+    username: '@ismail',
     tweets:[{
       profile_img: post_img,
       verified: true,
@@ -135,7 +135,7 @@ export const users = [
   , {
     id: 7,
     name: 'Muhammad Ishaq',
-    username: '@ismailkhan',
+    username: '@shazia',
     tweets:[
       {
         profile_img: user_img,
@@ -155,7 +155,7 @@ export const users = [
   , {
     id: 8,
     name: 'Muhammad Badar',
-    username: '@ismailkhan',
+    username: '@sana',
     tweets:[
       {
         profile_img: "",
@@ -197,7 +197,7 @@ export const users = [
   , {
     id: 10,
     name: 'Muhammad Badar',
-    username: '@ismailkhan',
+    username: '@Arooj',
     tweets:[
       {
       profile_img: "",

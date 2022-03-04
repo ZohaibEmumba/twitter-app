@@ -129,8 +129,8 @@ const Login: FC = () => {
       </Wrapper>
       <LinkWrapper>
         <ul>
-          {menuList.map((list) => (
-            <li>{list}</li>
+          {menuList.map((list , index) => (
+            <li key={index}>{list}</li>
           ))}
         </ul>
       </LinkWrapper>
