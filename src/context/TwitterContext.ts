@@ -3,28 +3,28 @@ import { SHOWTREND } from "../constants";
 import { Action, Dispatch } from "../types";
 
 export const initialState: any = {
-    username:"zohaib007",
+    username: "@zohaib007",
     trending: false,
     name: "",
-    posts: [],
-    trendingPostData : [{
+    homePosts: [],
+    trendingPostData: [{
         id: 1,
         country: "Trending in Pakistan",
         keyword: "ISPR",
         totalKeywords: "2000k",
-      },
-      {
+    },
+    {
         id: 2,
         country: "Trending in Pakistan",
         keyword: "IMRANKHAN",
         totalKeywords: "6000k",
-      },
-      {
+    },
+    {
         id: 3,
         country: "Trending in Pakistan",
         keyword: "YoutubeinPakistan",
         totalKeywords: "2560k",
-      },]
+    },]
 };
 
 export const TwitterContext = createContext<{
