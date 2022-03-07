@@ -1,4 +1,5 @@
 export const SHOWTREND = "SHOWTREND"
+export const GETUSERS = "GETUSERS"
 export const NAME ="Muhammad Zohaib"
 export const USERNAME = "@zohaibkhan"
 export const TEXT = "This Person reacted to your post"

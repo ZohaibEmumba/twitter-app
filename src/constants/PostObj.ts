@@ -7,9 +7,9 @@ const time = timestamp.getHours() + "h";
 export const users = [
   {
     id: 1,
-    username: '@zohaib007',
+    username: 'zohaib007',
     name: 'Muhammad Zohaib',
-    tweets: [
+    tweets: 
       {
         profile_img: user_img,
         post_time: time,
@@ -19,27 +19,17 @@ export const users = [
         post_coments: 20,
         retweet: 10,
         post_hearts: 200,
-      },
-      {
-        profile_img: user_img,
-        post_time: time,
-        post_despcription: 'This is my secoun post',
-        post_img: post_img,
-        verified: false,
-        post_coments: 20,
-        retweet: 10,
-        post_hearts: 200,
       }
-    ],
-    followers: ['@muneeb', '@usama', '@subhan', '@ali'],
-    following: ['@usman', '@zaib', '@sunny', '@nouman'],
+    ,
+    followers: ['muneeb', 'usama', 'subhan', 'ali'],
+    following: ['usman', 'zaib', 'sunny', 'nouman'],
     work_desp: 'PTI | Professor UI | PhD in Leadership',
   },
   {
     id: 2,
     name: 'Muhammad Usman',
-    username: '@usman',
-    tweets: [
+    username: 'usman',
+    tweets: 
       {
         profile_img: '',
         verified: true,
@@ -50,16 +40,16 @@ export const users = [
         retweet: 1,
         post_hearts: 200,
       }
-    ],
-    followers: ['@usman', '@zaib', '@sunny', '@nouman'],
-    following: ['@muneeb', '@usama', '@subhan', '@ali', '@ibrahim'],
+    ,
+    followers: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
     work_desp: 'React js | Frontend | HTML ',
   },
   {
     id: 3,
-    username: '@ibrahim',
+    username: 'ibrahim',
     name: 'Muhammad Ibrahim',
-    tweets: [
+    tweets: 
       {
         profile_img: '',
         verified: false,
@@ -70,16 +60,16 @@ export const users = [
         retweet: 10,
         post_hearts: 20,
       }
-    ],
-    followers: ['@ibrahim', '@ali', '@ismail'],
-    following: ['@usman', '@zaib', '@sunny', '@nouman'],
+    ,
+    followers: ['ibrahim', 'ali', 'ismail'],
+    following: ['usman', 'zaib', 'sunny', 'nouman'],
     work_desp: 'Node js | Backend ',
   },
   {
     id: 4,
     name: 'Muhammad Ismail',
-    username: '@ismail',
-    tweets: [
+    username: 'ismail',
+    tweets: 
       {
         profile_img: user_img,
         verified: true,
@@ -90,16 +80,16 @@ export const users = [
         retweet: 15,
         post_hearts: 50,
       }
-    ],
-    followers: ['@muneeb', '@usama', '@subhan', '@ali'],
-    following: ['@usman', '@zaib', '@sunny', '@nouman'],
+    ,
+    followers: ['muneeb', 'usama', 'subhan', 'ali'],
+    following: ['usman', 'zaib', 'sunny', 'nouman'],
     work_desp: 'Full stack ',
   }
   , {
     id: 5,
     name: 'Muhammad Badar',
-    username: '@ismailkhan',
-    tweets: [
+    username: 'ismailkhan',
+    tweets: 
       {
       profile_img: "",
       verified: true,
@@ -109,16 +99,16 @@ export const users = [
       post_coments: 20,
       retweet: 15,
       post_hearts: 50,
-    }],
-    followers: ['@ibrahim', '@ali', '@ismail'],
-    following: ['@usman', '@zaib', '@sunny', '@nouman'],
+    },
+    followers: ['ibrahim', 'ali', 'ismail'],
+    following: ['usman', 'zaib', 'sunny', 'nouman'],
     work_desp: 'Python Eng ',
   }
   , {
     id: 6,
     name: 'Muhammad Badar',
-    username: '@ismail',
-    tweets:[{
+    username: 'ismail',
+    tweets:{
       profile_img: post_img,
       verified: true,
       post_time: time,
@@ -127,16 +117,16 @@ export const users = [
       post_coments: 20,
       retweet: 15,
       post_hearts: 50,
-    }],
-    followers: ['@ibrahim', '@ali', '@ismail'],
-    following: ['@usman', '@zaib', '@sunny', '@nouman'],
+    },
+    followers: ['ibrahim', 'ali', 'ismail'],
+    following: ['usman', 'zaib', 'sunny', 'nouman'],
     work_desp: 'Python Eng ',
   }
   , {
     id: 7,
     name: 'Muhammad Ishaq',
-    username: '@shazia',
-    tweets:[
+    username: 'shazia',
+    tweets:
       {
         profile_img: user_img,
         verified: false,
@@ -147,16 +137,16 @@ export const users = [
         retweet: 15,
         post_hearts: 50,
       }
-    ],
-    followers: ['@usman', '@zaib', '@sunny', '@nouman'],
-    following: ['@muneeb', '@usama', '@subhan', '@ali', '@ibrahim'],
+    ,
+    followers: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
     work_desp: 'Python Eng ',
   }
   , {
     id: 8,
     name: 'Muhammad Badar',
-    username: '@sana',
-    tweets:[
+    username: 'sana',
+    tweets:
       {
         profile_img: "",
         verified: true,
@@ -167,17 +157,17 @@ export const users = [
         retweet: 15,
         post_hearts: 50,
       }
-    ],
-    followers: ['@usman', '@zaib', '@sunny', '@nouman'],
-    following: ['@muneeb', '@usama', '@subhan', '@ali', '@ibrahim'],
+    ,
+    followers: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
     work_desp: 'Python Eng ',
     isFollowing: false,
   }
   , {
     id: 9,
     name: 'Muhammad Badar',
-    username: '@ismailkhan',
-    tweets:[
+    username: 'ismailkhan',
+    tweets:
       {
         profile_img: user_img,
         verified: false,
@@ -188,17 +178,17 @@ export const users = [
         retweet: 15,
         post_hearts: 50,
       }
-    ],
-    followers: ['@usman', '@zaib', '@sunny', '@nouman'],
-    following: ['@muneeb', '@usama', '@subhan', '@ali', '@ibrahim'],
+    ,
+    followers: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
     work_desp: 'Python Eng ',
     isFollowing: true,
   }
   , {
     id: 10,
     name: 'Muhammad Badar',
-    username: '@Arooj',
-    tweets:[
+    username: 'Arooj',
+    tweets:
       {
       profile_img: "",
       verified: true,
@@ -208,9 +198,9 @@ export const users = [
       post_coments: 20,
       retweet: 15,
       post_hearts: 50,
-    }],
-    followers: ['@usman', '@zaib', '@sunny', '@nouman'],
-    following: ['@muneeb', '@usama', '@subhan', '@ali', '@ibrahim'],
+    },
+    followers: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
     work_desp: 'Python Eng ',
     isFollowing: true,
   }

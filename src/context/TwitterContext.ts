@@ -1,14 +1,13 @@
 import { createContext } from "react";
-import { SHOWTREND } from "../constants";
-import { users } from "../constants/PostObj";
+import { GETUSERS, SHOWTREND } from "../constants";
 import { Action, Dispatch } from "../types";
 
 export const initialState: any = {
     // username: "@zohaib007",
     trending: false,
     name: "",
-    allUsers: users,
     homePosts: [],
+    allUsers: [],
     trendingPostData: [{
         id: 1,
         country: "Trending in Pakistan",
@@ -26,7 +25,7 @@ export const initialState: any = {
         country: "Trending in Pakistan",
         keyword: "YoutubeinPakistan",
         totalKeywords: "2560k",
-    },]
+    }]
 };
 
 export const TwitterContext = createContext<{
@@ -38,14 +37,19 @@ export const TwitterContext = createContext<{
 });
 
 export const Reducer = (state = initialState, action: Action): any => {
-    const { type, payload } = action;
+    const { type} = action;
     switch (type) {
         case SHOWTREND:
             return {
                 ...state,
-                trending: payload.trending,
-                name: payload.name
+                trending: action.payload.trending,
+                name: action.payload.name
             };
+        case GETUSERS:
+            return{
+                ...state,
+                allUsers: action.payload.allUsers
+            }
         default:
             return state;
     }

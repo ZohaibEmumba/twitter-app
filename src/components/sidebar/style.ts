@@ -100,7 +100,7 @@ export const SidebarBtn = styled.div`
   }
 `;
 export const MainWrapper = styled.div`
-  width: 236px;
+  width: 250px;
   margin-bottom: 12px;
   margin-top: 12px;
   margin-right: 10px;

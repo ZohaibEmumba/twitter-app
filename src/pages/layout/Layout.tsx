@@ -12,8 +12,7 @@ import { EndWrapper, MiddleWrapper, Section, SideBarWrapper } from "./style";
 const Layout = () => {
   const { state } = useContext(TwitterContext);
   const { trending } = state;
-
-  console.log(state);
+  
   return (
     <Section>
       <SideBarWrapper>
