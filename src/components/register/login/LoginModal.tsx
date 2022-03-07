@@ -12,8 +12,9 @@ const LoginModal = () => {
   const Navigate = useNavigate();
 
   const onFinish = () => {
-    const val = allUsers.some(checkUserName);
-    if (val) {
+    console.log(allUsers)
+    const checkUser = allUsers.some(checkUserName);
+    if (checkUser) {
       Navigate("/home");
       notification.success({
         message: "Login",
@@ -27,9 +28,7 @@ const LoginModal = () => {
     }
   };
 
-  const checkUserName = (name: any) => {
-    return name?.username === userData.username;
-  };
+  const checkUserName = (user:any) => user?.username === userData.username;
 
   const onFinishFailed = () => {
     alert("Please fill out tge fields");

@@ -27,8 +27,8 @@ export const users = [
   },
   {
     id: 2,
-    name: 'Muhammad Usman',
     username: 'usman',
+    name: 'Muhammad Usman',
     tweets: 
       {
         profile_img: '',
@@ -67,8 +67,8 @@ export const users = [
   },
   {
     id: 4,
-    name: 'Muhammad Ismail',
     username: 'ismail',
+    name: 'Muhammad Ismail',
     tweets: 
       {
         profile_img: user_img,
@@ -87,8 +87,8 @@ export const users = [
   }
   , {
     id: 5,
-    name: 'Muhammad Badar',
     username: 'ismailkhan',
+    name: 'Muhammad Badar',
     tweets: 
       {
       profile_img: "",
@@ -106,8 +106,8 @@ export const users = [
   }
   , {
     id: 6,
-    name: 'Muhammad Badar',
     username: 'ismail',
+    name: 'Muhammad Badar',
     tweets:{
       profile_img: post_img,
       verified: true,
@@ -124,8 +124,8 @@ export const users = [
   }
   , {
     id: 7,
-    name: 'Muhammad Ishaq',
     username: 'shazia',
+    name: 'Muhammad Ishaq',
     tweets:
       {
         profile_img: user_img,
@@ -144,8 +144,8 @@ export const users = [
   }
   , {
     id: 8,
-    name: 'Muhammad Badar',
     username: 'sana',
+    name: 'Muhammad Badar',
     tweets:
       {
         profile_img: "",
@@ -165,8 +165,8 @@ export const users = [
   }
   , {
     id: 9,
-    name: 'Muhammad Badar',
     username: 'ismailkhan',
+    name: 'Muhammad Badar',
     tweets:
       {
         profile_img: user_img,
@@ -186,8 +186,8 @@ export const users = [
   }
   , {
     id: 10,
+    username: 'arooj',
     name: 'Muhammad Badar',
-    username: 'Arooj',
     tweets:
       {
       profile_img: "",
