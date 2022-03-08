@@ -1,10 +1,12 @@
-import { useContext, useState } from "react";
+import { FC, useContext, useState } from "react";
 import { Form, Input, Button, notification } from "antd";
 import { TwitterContext } from "../../../context/TwitterContext";
 import { useNavigate } from "react-router-dom";
+import { find } from "lodash";
+import { GETSPECIFICUSERS } from "../../../constants";
 
-const LoginModal = () => {
-  const { state } = useContext(TwitterContext);
+const LoginModal: FC = () => {
+  const { state, dispatch } = useContext(TwitterContext);
   const { allUsers } = state;
   const [userData, setUserData] = useState<any>({
     username: "",
@@ -12,8 +14,11 @@ const LoginModal = () => {
   const Navigate = useNavigate();
 
   const onFinish = () => {
-    console.log(allUsers)
-    const checkUser = allUsers.some(checkUserName);
+    const checkUser = find(
+      allUsers,
+      (user: any) => user?.username === userData?.username
+    );
+
     if (checkUser) {
       Navigate("/home");
       notification.success({
@@ -26,9 +31,13 @@ const LoginModal = () => {
         description: "You Enter wrong username",
       });
     }
+    dispatch({
+      type: GETSPECIFICUSERS,
+      payload: {
+        loginuser: checkUser,
+      },
+    });
   };
-
-  const checkUserName = (user:any) => user?.username === userData.username;
 
   const onFinishFailed = () => {
     alert("Please fill out tge fields");

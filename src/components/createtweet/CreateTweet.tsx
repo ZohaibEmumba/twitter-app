@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { TwitterContext } from "../../context/TwitterContext";
 import {
   FaRegImage,
   FaRegListAlt,
@@ -18,16 +19,18 @@ import {
 } from "./style";
 import img from "../../assets/zohaib.jpg";
 import TwitterButton from "../common/Button/TwitterButton";
-import { Tooltip } from "antd";
+import { Avatar, Tooltip } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 
 const CreateTweet = (props: any) => {
   const { className } = props;
   const [postText, setPostText] = useState<any>({});
   const [disable, setDisable] = useState<boolean>(true);
+  const { state } = useContext(TwitterContext);
+  const { loginuser } = state;
+  const { profile_img } = loginuser;
 
-  const handleCreateTweet = () => {
-    alert(postText);
-  };
+  const handleCreateTweet = () => alert(postText);
   const handleInputChange = (e: { target: any }) => {
     if (e.target.value.length > 0) {
       setDisable(false);
@@ -41,7 +44,15 @@ const CreateTweet = (props: any) => {
       <CreateSection className={className ? className : "show-padding"}>
         <Createfirst>
           <Createimg>
-            <img src={img} alt="profile " />
+            {profile_img ? (
+              <img src={profile_img} alt="profile" />
+            ) : (
+              <Avatar
+                className="avatar-icon"
+                size={50}
+                icon={<UserOutlined />}
+              />
+            )}
           </Createimg>
           <Createinput>
             <div>

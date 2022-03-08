@@ -9,7 +9,7 @@ import {
 import Layout from "./pages/layout/Layout";
 import "./App.css";
 import { filter } from "lodash";
-import { GETUSERS } from "./constants";
+import { GETALLUSERS } from "./constants";
 import { users } from "./constants/PostObj";
 
 const App: FC = () => {
@@ -19,7 +19,7 @@ const App: FC = () => {
 
   useEffect(() => {
     dispatch({
-      type: GETUSERS,
+      type: GETALLUSERS,
       payload: {
         allUsers: allUsers,
       },

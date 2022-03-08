@@ -1,9 +1,9 @@
 import { createContext } from "react";
-import { GETUSERS, SHOWTREND } from "../constants";
+import { GETALLUSERS, GETSPECIFICUSERS, SHOWTREND } from "../constants";
 import { Action, Dispatch } from "../types";
 
 export const initialState: any = {
-    // username: "@zohaib007",
+    loginuser:{},
     trending: false,
     name: "",
     homePosts: [],
@@ -45,11 +45,16 @@ export const Reducer = (state = initialState, action: Action): any => {
                 trending: action.payload.trending,
                 name: action.payload.name
             };
-        case GETUSERS:
+        case GETALLUSERS:
             return{
                 ...state,
                 allUsers: action.payload.allUsers
             }
+        case GETSPECIFICUSERS:
+            return{
+                ...state,
+                loginuser:action.payload.loginuser
+            }    
         default:
             return state;
     }

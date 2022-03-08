@@ -1,5 +1,6 @@
 export const SHOWTREND = "SHOWTREND"
-export const GETUSERS = "GETUSERS"
+export const GETALLUSERS = "GETALLUSERS"
+export const GETSPECIFICUSERS = "GETSPECIFICUSERS"
 export const NAME ="Muhammad Zohaib"
 export const USERNAME = "@zohaibkhan"
 export const TEXT = "This Person reacted to your post"

@@ -7,11 +7,11 @@ const time = timestamp.getHours() + "h";
 export const users = [
   {
     id: 1,
-    username: 'zohaib007',
+    username: 'zohaib',
     name: 'Muhammad Zohaib',
+    profile_img: user_img,
     tweets: 
       {
-        profile_img: user_img,
         post_time: time,
         post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
         post_img: post_img,
@@ -29,9 +29,9 @@ export const users = [
     id: 2,
     username: 'usman',
     name: 'Muhammad Usman',
+    profile_img: '',
     tweets: 
       {
-        profile_img: '',
         verified: true,
         post_time: time,
         post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -49,9 +49,9 @@ export const users = [
     id: 3,
     username: 'ibrahim',
     name: 'Muhammad Ibrahim',
+    profile_img: '',
     tweets: 
       {
-        profile_img: '',
         verified: false,
         post_time: time,
         post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -69,9 +69,9 @@ export const users = [
     id: 4,
     username: 'ismail',
     name: 'Muhammad Ismail',
+    profile_img: user_img,
     tweets: 
       {
-        profile_img: user_img,
         verified: true,
         post_time: time,
         post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -89,9 +89,9 @@ export const users = [
     id: 5,
     username: 'ismailkhan',
     name: 'Muhammad Badar',
+    profile_img: "",
     tweets: 
       {
-      profile_img: "",
       verified: true,
       post_time: time,
       post_despcription: 'I am the python Engieener',
@@ -108,8 +108,8 @@ export const users = [
     id: 6,
     username: 'ismail',
     name: 'Muhammad Badar',
+    profile_img: post_img,
     tweets:{
-      profile_img: post_img,
       verified: true,
       post_time: time,
       post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -126,9 +126,9 @@ export const users = [
     id: 7,
     username: 'shazia',
     name: 'Muhammad Ishaq',
+    profile_img: user_img,
     tweets:
       {
-        profile_img: user_img,
         verified: false,
         post_time: time,
         post_despcription: 'I am the python Engieener',
@@ -146,9 +146,9 @@ export const users = [
     id: 8,
     username: 'sana',
     name: 'Muhammad Badar',
+    profile_img: "",
     tweets:
       {
-        profile_img: "",
         verified: true,
         post_time: time,
         post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -167,9 +167,9 @@ export const users = [
     id: 9,
     username: 'ismailkhan',
     name: 'Muhammad Badar',
+    profile_img: user_img,
     tweets:
       {
-        profile_img: user_img,
         verified: false,
         post_time: time,
         post_despcription: 'I am the python Engieener',
@@ -187,10 +187,10 @@ export const users = [
   , {
     id: 10,
     username: 'arooj',
-    name: 'Muhammad Badar',
+    name: 'Arooj Fatima',
+    profile_img: "",
     tweets:
       {
-      profile_img: "",
       verified: true,
       post_time: time,
       post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',

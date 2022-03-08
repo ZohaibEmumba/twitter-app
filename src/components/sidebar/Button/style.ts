@@ -33,7 +33,6 @@ export const IconWrapper = styled.div`
   color: grey;
 `;
 export const ProfileButton = styled.div`
-  padding: 10px 10px;
   display: flex;
   border: 1px solid white;
   border-radius: 50px;

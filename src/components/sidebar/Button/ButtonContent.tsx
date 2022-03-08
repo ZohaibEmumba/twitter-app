@@ -1,47 +1,60 @@
-import { FaCheck } from 'react-icons/fa'
-import { MainWrapper, ProfileButton, Img, NameWrapper, MarginWrapper, TextSpan, TextSpan1, IconWrapper } from './style'
-import profileImg from "../../../assets/zohaib.jpg";
-import { NAME } from '../../../constants';
+import { UserOutlined } from "@ant-design/icons";
+import { Avatar } from "antd";
+import { FaCheck } from "react-icons/fa";
+import {
+  MainWrapper,
+  ProfileButton,
+  Img,
+  NameWrapper,
+  MarginWrapper,
+  TextSpan,
+  TextSpan1,
+  IconWrapper,
+} from "./style";
 
-const PopOverButton = () => {
+const PopOverButton = (props: any) => {
+  const { loginuser } = props;
+  const { name, username, profile_img } = loginuser;
   return (
     <MainWrapper>
-    <ProfileButton>
-      <div>
-        <Img
-          src={profileImg}
-          alt=""
-          width="40px"
-          height="40px"
-        />
-      </div>
-      <NameWrapper>
+      <ProfileButton>
         <div>
-          <MarginWrapper>
-            <span>
-              <TextSpan>
-                <strong>{NAME}</strong>
-              </TextSpan>
-            </span>
-        </MarginWrapper>
+          {profile_img ? (
+            <Img
+              src={profile_img}
+              alt=""
+              width="40px"
+              height="40px"
+              style={{ borderRadius: "50%" }}
+            />
+          ) : (
+            <Avatar className="avatar-icon" size={50} icon={<UserOutlined />} />
+          )}
         </div>
-        <div>
-          <MarginWrapper>
-            <span>
-              <TextSpan1>
-                @MuhammadZohaib
-              </TextSpan1>
-            </span>
-          </MarginWrapper>
-        </div>
-      </NameWrapper>
-      <IconWrapper>
-        <FaCheck />
-      </IconWrapper>
-    </ProfileButton>
-  </MainWrapper>
+        <NameWrapper>
+          <div>
+            <MarginWrapper>
+              <span>
+                <TextSpan>
+                  <strong>{name}</strong>
+                </TextSpan>
+              </span>
+            </MarginWrapper>
+          </div>
+          <div>
+            <MarginWrapper>
+              <span>
+                <TextSpan1>{username}</TextSpan1>
+              </span>
+            </MarginWrapper>
+          </div>
+        </NameWrapper>
+        <IconWrapper>
+          <FaCheck />
+        </IconWrapper>
+      </ProfileButton>
+    </MainWrapper>
+  );
+};
 
-  )
-}
-
-export default PopOverButton
+export default PopOverButton;

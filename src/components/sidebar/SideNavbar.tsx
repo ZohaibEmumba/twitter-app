@@ -10,7 +10,6 @@ import { VscSymbolNumeric } from "react-icons/vsc";
 import TwitterButton from "../common/Button/TwitterButton";
 import {
   IconWrapper,
-  Img,
   MainSection,
   MainWrapper,
   MarginWrapper,
@@ -21,15 +20,14 @@ import {
   TextSpan,
   TextSpan1,
 } from "./style";
-import profileImg from "../../assets/zohaib.jpg";
 import { Link, useLocation } from "react-router-dom";
-import { Dropdown, Popover } from "antd";
+import { Avatar, Dropdown, Popover } from "antd";
 import { useContext, useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
-import { NAME, SHOWTREND, USERNAME } from "../../constants";
+import { SHOWTREND } from "../../constants";
 import {
   IoAddCircleOutline,
   IoBrushOutline,
@@ -40,16 +38,19 @@ import {
 import ModalWrapper from "../common/Modal/Modal";
 import CreateTweet from "../createtweet/CreateTweet";
 import { TwitterContext } from "../../context/TwitterContext";
+import { UserOutlined } from "@ant-design/icons";
 
 const SideNavbar = () => {
   const [visible, setvisible] = useState<boolean>(false);
   const [notificationModal, setShowNotificationModal] =
     useState<boolean>(false);
   const [tweetModal, setTweetModal] = useState<boolean>(false);
-  const { dispatch } = useContext(TwitterContext);
+  const { state, dispatch } = useContext(TwitterContext);
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
+  const { loginuser } = state;
+  const { name, username, profile_img } = loginuser;
 
   const handleVisibleChange = (
     visible: boolean | ((prevState: boolean) => boolean)
@@ -198,8 +199,8 @@ const SideNavbar = () => {
 
         <Popover
           trigger="click"
-          content={<PorpoverContent />}
-          title={<PopOverButton />}
+          content={<PorpoverContent loginuser={loginuser} />}
+          title={<PopOverButton loginuser={loginuser} />}
           visible={visible}
           onVisibleChange={handleVisibleChange}
           overlayStyle={{ position: "fixed" }}
@@ -207,19 +208,28 @@ const SideNavbar = () => {
           <MainWrapper>
             <ProfileButton>
               <div>
-                <Img
-                  src={profileImg}
-                  alt="profile logo"
-                  width="40px"
-                  height="40px"
-                />
+                {profile_img ? (
+                  <img
+                    src={profile_img}
+                    alt="profile img"
+                    width={"40px"}
+                    height={"40px"}
+                    style={{ borderRadius: "50%" }}
+                  />
+                ) : (
+                  <Avatar
+                    className="avatar-icon"
+                    size={50}
+                    icon={<UserOutlined />}
+                  />
+                )}
               </div>
               <NameWrapper>
                 <div>
                   <MarginWrapper>
                     <span>
                       <TextSpan>
-                        <strong>{NAME}</strong>
+                        <strong>{name}</strong>
                       </TextSpan>
                     </span>
                   </MarginWrapper>
@@ -227,7 +237,7 @@ const SideNavbar = () => {
                 <div>
                   <MarginWrapper>
                     <span>
-                      <TextSpan1>{USERNAME}</TextSpan1>
+                      <TextSpan1>{username}</TextSpan1>
                     </span>
                   </MarginWrapper>
                 </div>
