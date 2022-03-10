@@ -1,24 +1,29 @@
-import { FC, useContext, useState } from "react";
-import { Form, Input, Button, notification } from "antd";
-import { TwitterContext } from "../../../context/TwitterContext";
+import { FC } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { notification } from "antd";
 import { useNavigate } from "react-router-dom";
 import { find } from "lodash";
-import { GETSPECIFICUSERS } from "../../../constants";
+import { useDispatch, useSelector } from "react-redux";
+import { Button, Grid, TextField } from "@mui/material";
+import { getspecificuser } from "../../../reducers/twitter";
+
+type Inputs = {
+  username: string;
+  exampleRequired: string;
+};
 
 const LoginModal: FC = () => {
-  const { state, dispatch } = useContext(TwitterContext);
-  const { allUsers } = state;
-  const [userData, setUserData] = useState<any>({
-    username: "",
-  });
+  const userObj = useSelector((state: any) => state?.twitter?.allUsers);
+  const dispatch = useDispatch();
+
   const Navigate = useNavigate();
+  const { register, handleSubmit } = useForm<Inputs>();
 
-  const onFinish = () => {
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     const checkUser = find(
-      allUsers,
-      (user: any) => user?.username === userData?.username
+      userObj,
+      (user: any) => user?.username === data?.username
     );
-
     if (checkUser) {
       Navigate("/home");
       notification.success({
@@ -31,45 +36,27 @@ const LoginModal: FC = () => {
         description: "You Enter wrong username",
       });
     }
-    dispatch({
-      type: GETSPECIFICUSERS,
-      payload: {
-        loginuser: checkUser,
-      },
-    });
-  };
-
-  const onFinishFailed = () => {
-    alert("Please fill out tge fields");
+    dispatch(getspecificuser(checkUser));
   };
 
   return (
-    <Form
-      name="Login Form"
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-    >
-      <Form.Item
-        label="Username"
-        name="username"
-        rules={[{ required: true, message: "Please input your username!" }]}
-      >
-        <Input
-          onChange={(e: any) =>
-            setUserData({
-              ...userData,
-              username: e.target.value,
-            })
-          }
-        />
-      </Form.Item>
-      <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
-        <Button type="primary" htmlType="submit">
-          Login
-        </Button>
-      </Form.Item>
-    </Form>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Grid rowSpacing={10}>
+        <Grid item xs={24}>
+          <TextField
+            id="outlined-basic"
+            label="username"
+            variant="outlined"
+            placeholder="Enter username"
+            required
+            {...register("username")}
+          />
+        </Grid>
+        <Grid item xs={24}>
+          <Button variant="contained">Login</Button>
+        </Grid>
+      </Grid>
+    </form>
   );
 };
 

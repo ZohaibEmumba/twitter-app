@@ -1,4 +1,5 @@
-import { FC, useContext, useState} from "react";
+import { FC, useState} from "react";
+import { useSelector } from "react-redux";
 import { FaRegCheckCircle, FaEllipsisH } from "react-icons/fa";
 import {
   FirstPost,
@@ -23,19 +24,17 @@ import PopoverContent from "./popover-content/PopoverContent";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { TwitterContext } from "../../context/TwitterContext";
-import { isEqual } from "lodash";
+import { isEqual, values } from "lodash";
 
 const DsiplayTweet: FC = (): any => {
   const [heartActive, setHeartActive] = useState<boolean>(false);
-  const { state } = useContext(TwitterContext);
-  const {allUsers , loginuser} = state
+  const userOBJ = useSelector((state: any) => state?.twitter?.allUsers);
+  const loginUser = useSelector((state: any) => state?.twitter?.loginuser?.following);
+  console.log(userOBJ)
+ 
 
-  // console.log(loginuser)
-  // console.log(allUsers)
-
-  const HompPostData = isEqual(loginuser?.follower , allUsers?.username  );
-  console.log(loginuser )
-  console.log(allUsers)
+  userOBJ.map((username:any) => console.log(username))
+  // console.log(isSimilar)
   
   return (
     <div>

@@ -22,12 +22,11 @@ import {
 } from "./style";
 import { Link, useLocation } from "react-router-dom";
 import { Avatar, Dropdown, Popover } from "antd";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import PopOverButton from "./Button/ButtonContent";
 import PorpoverContent from "./content/PorpoverContent";
 import { menu } from "./dropdown-menu/DropdownMenu";
 import Notifications from "../notifications/Notifications";
-import { SHOWTREND } from "../../constants";
 import {
   IoAddCircleOutline,
   IoBrushOutline,
@@ -37,20 +36,20 @@ import {
 } from "react-icons/io5";
 import ModalWrapper from "../common/Modal/Modal";
 import CreateTweet from "../createtweet/CreateTweet";
-import { TwitterContext } from "../../context/TwitterContext";
 import { UserOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { showtrend } from "../../reducers/twitter";
 
 const SideNavbar = () => {
+  const dispatch = useDispatch();
   const [visible, setvisible] = useState<boolean>(false);
   const [notificationModal, setShowNotificationModal] =
     useState<boolean>(false);
   const [tweetModal, setTweetModal] = useState<boolean>(false);
-  const { state, dispatch } = useContext(TwitterContext);
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
-  const { loginuser } = state;
-  const { name, username, profile_img } = loginuser;
+  const loginUser = useSelector((state:any) => state?.twitter?.loginuser );
 
   const handleVisibleChange = (
     visible: boolean | ((prevState: boolean) => boolean)
@@ -60,14 +59,8 @@ const SideNavbar = () => {
   const handleNotificationClick = () => setShowNotificationModal(true);
   const handleTweetBtn = () => setTweetModal(true);
   const handleHomeClick = () => {
-    dispatch({
-      type: SHOWTREND,
-      payload: {
-        trending: false,
-        name: "",
-      },
-    });
-  };
+     dispatch(showtrend({ trending: false , name : ''}))
+  }
 
   return (
     <>
@@ -199,8 +192,8 @@ const SideNavbar = () => {
 
         <Popover
           trigger="click"
-          content={<PorpoverContent loginuser={loginuser} />}
-          title={<PopOverButton loginuser={loginuser} />}
+          content={<PorpoverContent loginuser={loginUser} />}
+          title={<PopOverButton loginuser={loginUser} />}
           visible={visible}
           onVisibleChange={handleVisibleChange}
           overlayStyle={{ position: "fixed" }}
@@ -208,9 +201,9 @@ const SideNavbar = () => {
           <MainWrapper>
             <ProfileButton>
               <div>
-                {profile_img ? (
+                {loginUser?.profile_img ? (
                   <img
-                    src={profile_img}
+                    src={loginUser.profile_img}
                     alt="profile img"
                     width={"40px"}
                     height={"40px"}
@@ -229,7 +222,7 @@ const SideNavbar = () => {
                   <MarginWrapper>
                     <span>
                       <TextSpan>
-                        <strong>{name}</strong>
+                        <strong>{loginUser?.name}</strong>
                       </TextSpan>
                     </span>
                   </MarginWrapper>
@@ -237,7 +230,7 @@ const SideNavbar = () => {
                 <div>
                   <MarginWrapper>
                     <span>
-                      <TextSpan1>{username}</TextSpan1>
+                      <TextSpan1>{loginUser?.username}</TextSpan1>
                     </span>
                   </MarginWrapper>
                 </div>

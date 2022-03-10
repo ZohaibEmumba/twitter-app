@@ -10,16 +10,16 @@ export const users = [
     username: 'zohaib',
     name: 'Muhammad Zohaib',
     profile_img: user_img,
-    tweets: 
-      {
-        post_time: time,
-        post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
-        post_img: post_img,
-        verified: false,
-        post_coments: 20,
-        retweet: 10,
-        post_hearts: 200,
-      }
+    tweets:
+    {
+      post_time: time,
+      post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
+      post_img: post_img,
+      verified: false,
+      post_coments: 20,
+      retweet: 10,
+      post_hearts: 200,
+    }
     ,
     followers: ['muneeb', 'usama', 'subhan', 'ali'],
     following: ['usman', 'zaib', 'sunny', 'nouman'],
@@ -30,16 +30,16 @@ export const users = [
     username: 'usman',
     name: 'Muhammad Usman',
     profile_img: '',
-    tweets: 
-      {
-        verified: true,
-        post_time: time,
-        post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
-        post_img: '',
-        post_coments: 30,
-        retweet: 1,
-        post_hearts: 200,
-      }
+    tweets:
+    {
+      verified: true,
+      post_time: time,
+      post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
+      post_img: '',
+      post_coments: 30,
+      retweet: 1,
+      post_hearts: 200,
+    }
     ,
     followers: ['usman', 'zaib', 'sunny', 'nouman'],
     following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
@@ -50,16 +50,16 @@ export const users = [
     username: 'ibrahim',
     name: 'Muhammad Ibrahim',
     profile_img: '',
-    tweets: 
-      {
-        verified: false,
-        post_time: time,
-        post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
-        post_img: post_img,
-        post_coments: 40,
-        retweet: 10,
-        post_hearts: 20,
-      }
+    tweets:
+    {
+      verified: false,
+      post_time: time,
+      post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
+      post_img: post_img,
+      post_coments: 40,
+      retweet: 10,
+      post_hearts: 20,
+    }
     ,
     followers: ['ibrahim', 'ali', 'ismail'],
     following: ['usman', 'zaib', 'sunny', 'nouman'],
@@ -70,16 +70,16 @@ export const users = [
     username: 'ismail',
     name: 'Muhammad Ismail',
     profile_img: user_img,
-    tweets: 
-      {
-        verified: true,
-        post_time: time,
-        post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
-        post_img: "",
-        post_coments: 20,
-        retweet: 15,
-        post_hearts: 50,
-      }
+    tweets:
+    {
+      verified: true,
+      post_time: time,
+      post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
+      post_img: "",
+      post_coments: 20,
+      retweet: 15,
+      post_hearts: 50,
+    }
     ,
     followers: ['muneeb', 'usama', 'subhan', 'ali'],
     following: ['usman', 'zaib', 'sunny', 'nouman'],
@@ -87,11 +87,11 @@ export const users = [
   }
   , {
     id: 5,
-    username: 'ismailkhan',
+    username: 'ali',
     name: 'Muhammad Badar',
     profile_img: "",
-    tweets: 
-      {
+    tweets:
+    {
       verified: true,
       post_time: time,
       post_despcription: 'I am the python Engieener',
@@ -101,7 +101,7 @@ export const users = [
       post_hearts: 50,
     },
     followers: ['ibrahim', 'ali', 'ismail'],
-    following: ['usman', 'zaib', 'sunny', 'nouman'],
+    following: ['usman', 'arooj', 'zohaib'],
     work_desp: 'Python Eng ',
   }
   , {
@@ -109,7 +109,7 @@ export const users = [
     username: 'ismail',
     name: 'Muhammad Badar',
     profile_img: post_img,
-    tweets:{
+    tweets: {
       verified: true,
       post_time: time,
       post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
@@ -128,15 +128,15 @@ export const users = [
     name: 'Muhammad Ishaq',
     profile_img: user_img,
     tweets:
-      {
-        verified: false,
-        post_time: time,
-        post_despcription: 'I am the python Engieener',
-        post_img: "",
-        post_coments: 20,
-        retweet: 15,
-        post_hearts: 50,
-      }
+    {
+      verified: false,
+      post_time: time,
+      post_despcription: 'I am the python Engieener',
+      post_img: "",
+      post_coments: 20,
+      retweet: 15,
+      post_hearts: 50,
+    }
     ,
     followers: ['usman', 'zaib', 'sunny', 'nouman'],
     following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
@@ -148,15 +148,15 @@ export const users = [
     name: 'Muhammad Badar',
     profile_img: "",
     tweets:
-      {
-        verified: true,
-        post_time: time,
-        post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
-        post_img: post_img,
-        post_coments: 20,
-        retweet: 15,
-        post_hearts: 50,
-      }
+    {
+      verified: true,
+      post_time: time,
+      post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
+      post_img: post_img,
+      post_coments: 20,
+      retweet: 15,
+      post_hearts: 50,
+    }
     ,
     followers: ['usman', 'zaib', 'sunny', 'nouman'],
     following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
@@ -169,15 +169,15 @@ export const users = [
     name: 'Muhammad Badar',
     profile_img: user_img,
     tweets:
-      {
-        verified: false,
-        post_time: time,
-        post_despcription: 'I am the python Engieener',
-        post_img: "",
-        post_coments: 20,
-        retweet: 15,
-        post_hearts: 50,
-      }
+    {
+      verified: false,
+      post_time: time,
+      post_despcription: 'I am the python Engieener',
+      post_img: "",
+      post_coments: 20,
+      retweet: 15,
+      post_hearts: 50,
+    }
     ,
     followers: ['usman', 'zaib', 'sunny', 'nouman'],
     following: ['muneeb', 'usama', 'subhan', 'ali', 'ibrahim'],
@@ -190,7 +190,7 @@ export const users = [
     name: 'Arooj Fatima',
     profile_img: "",
     tweets:
-      {
+    {
       verified: true,
       post_time: time,
       post_despcription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima idiure, enim pariatur ullam eligendi vero possimus ad error nemo. Facere aliquid dolores placeat vitae accusamus excepturi officiis magnam',
